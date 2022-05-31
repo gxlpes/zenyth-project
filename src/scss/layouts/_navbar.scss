@@ -4,7 +4,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: clamp(0rem, 4rem, 5rem);
   color: i.$clr-text;
 
   .logo {

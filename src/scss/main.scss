@@ -15,9 +15,11 @@ body {
   display: flex;
   flex-direction: column;
   font-family: i.$font-family;
+  max-width: 45rem;
 }
 
-content {
-  max-width: 90rem;
-  margin-inline: clamp(2rem, 4rem, 15rem);
+@media screen and (max-width: 764px) {
+  body {
+    max-width: 23rem;
+  }
 }
