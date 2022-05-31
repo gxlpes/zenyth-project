@@ -1,0 +1,25 @@
+{
+  "name": "zenyth-project",
+  "version": "1.0.0",
+  "description": "Repository created to practice SCSS and JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhermxlopes/zenyth-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guilhermxlopes/zenyth-project/issues"
+  },
+  "homepage": "https://github.com/guilhermxlopes/zenyth-project#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.52.1"
+  }
+}
