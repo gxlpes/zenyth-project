@@ -1,4 +1,5 @@
-@use "layouts/navbar";
+@use "./index" as i;
+@use "./layouts/navbar";
 
 *,
 *::before,
@@ -10,11 +11,13 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-body :not(nav) {
   margin: auto;
-  max-width: 90rem;
   display: flex;
   flex-direction: column;
+  font-family: i.$font-family;
+}
+
+content {
+  max-width: 90rem;
+  margin-inline: 15rem;
 }
