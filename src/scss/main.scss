@@ -11,3 +11,10 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+body :not(nav) {
+  margin: auto;
+  max-width: 90rem;
+  display: flex;
+  flex-direction: column;
+}
