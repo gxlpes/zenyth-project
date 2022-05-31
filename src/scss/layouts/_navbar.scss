@@ -1,11 +1,10 @@
 @use "../index" as i;
 
 nav {
-  background-color: lightblue;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.01rem 15rem;
+  padding-inline: clamp(0rem, 4rem, 5rem);
   color: i.$clr-text;
 
   .logo {
@@ -15,14 +14,62 @@ nav {
   a {
     text-decoration: none;
     color: i.$clr-text;
+    transition: all 0.2s ease-in-out;
+
+    a:hover {
+      color: i.$clr-purple1;
+      font-weight: 800;
+    }
   }
 
   ul {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    list-style: none;
     gap: 2rem;
     margin: 0;
     padding: 0;
-    list-style: none;
+  }
+
+  button.contact {
+    background-color: i.$clr-purple1;
+  }
+}
+
+.burguer {
+  display: none;
+}
+
+.burguer div {
+  width: 25px;
+  height: 3px;
+  background: i.$clr-text;
+  margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .burguer {
+    display: block;
+  }
+
+  nav ul {
+    position: absolute;
+    right: 0;
+    height: 60vh;
+    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: white;
+    transform: translateX(100%);
+  }
+
+  nav li {
+    opacity: 0;
   }
 }

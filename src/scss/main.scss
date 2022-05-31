@@ -19,5 +19,5 @@ body {
 
 content {
   max-width: 90rem;
-  margin-inline: 15rem;
+  margin-inline: clamp(2rem, 4rem, 15rem);
 }
