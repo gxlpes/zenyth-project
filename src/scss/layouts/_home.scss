@@ -34,6 +34,10 @@
   img {
     width: 300px;
     border-radius: 12px;
-    box-shadow: 9px 15px purple;
+    box-shadow: 15px 15px i.$clr-purple1;
   }
+}
+//modal window
+.hidden {
+  display: none;
 }

@@ -150,7 +150,11 @@ nav button.contact {
 .second-column img {
   width: 300px;
   border-radius: 12px;
-  box-shadow: 9px 15px purple;
+  box-shadow: 15px 15px #8d00bf;
+}
+
+.hidden {
+  display: none;
 }
 
 *,
@@ -175,7 +179,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    max-width: 22rem;
+    padding-inline: 2rem;
   }
 }
 
