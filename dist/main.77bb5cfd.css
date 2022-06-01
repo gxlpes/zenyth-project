@@ -179,14 +179,14 @@ nav button.contact {
   letter-spacing: -0.1rem;
 }
 .first-column h1 {
-  font-size: 3rem;
+  font-size: clamp(1rem, 2rem + 1.5vw, 5rem);
 }
 .first-column h1 span {
   color: #8d00bf;
 }
 .first-column h2 {
   margin-top: -1rem;
-  font-size: 2.2rem;
+  font-size: clamp(1rem, 1.5rem + 1vw, 2.2rem);
   font-weight: lighter;
 }
 .first-column .show-schedule {
@@ -197,7 +197,7 @@ nav button.contact {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 400px;
+  width: clamp(200px, 60vw, 400px);
   border-radius: 12px;
   box-shadow: 15px 15px #8d00bf;
 }
@@ -208,6 +208,10 @@ nav button.contact {
     align-items: center;
     justify-content: center;
     gap: 5rem;
+  }
+
+  .first-column {
+    width: 100%;
   }
 }
 *,
