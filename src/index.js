@@ -32,3 +32,8 @@ btnOpenModal.addEventListener("click", () => {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 });
+
+btnCloseModal.addEventListener("click", () => {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+});

@@ -162,7 +162,8 @@ nav button.contact {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 30%;
+  min-width: 25rem;
+  max-width: 45rem;
   background-color: grey;
   padding: 6rem;
   border-radius: 5px;
@@ -180,6 +181,17 @@ nav button.contact {
   backdrop-filter: blur(3px);
   z-index: 5;
   transition: all 5s ease-in-out;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #5a5a5a;
+  cursor: pointer;
+  border: none;
+  background: none;
 }
 
 *,
