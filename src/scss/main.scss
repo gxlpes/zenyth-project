@@ -20,16 +20,17 @@ body {
   margin: auto;
   font-family: i.$font-family;
   color: i.$clr-text;
+  max-width: 55rem;
 }
 
-@media (min-width: 1400px) {
-  body {
-    max-width: 1000px;
-  }
-}
+// @media (min-width: 1400px) {
+//   body {
+//     max-width: 1000px;
+//   }
+// }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   body {
-    padding-inline: 0.75rem;
+    max-width: 22rem;
   }
 }
