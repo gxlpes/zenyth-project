@@ -2,21 +2,38 @@
 
 #home {
   display: flex;
+  align-items: center;
+  margin-top: 2rem;
 }
 
 .first-column {
   display: flex;
   flex-direction: column;
+  margin-top: -4rem;
+  letter-spacing: -0.1rem;
+
   h1 {
     font-size: i.$font-size-xl;
     span {
-      color: purple;
+      color: i.$clr-purple1;
     }
+  }
+
+  h2 {
+    margin-top: -1rem;
+    font-size: i.$font-size-l;
+    font-weight: lighter;
+  }
+
+  .schedule {
+    background-color: i.$clr-purple1;
   }
 }
 
 .second-column {
   img {
-    width: 200px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 9px 15px purple;
   }
 }

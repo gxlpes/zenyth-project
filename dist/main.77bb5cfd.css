@@ -10,6 +10,20 @@
   cursor: pointer;
 }
 
+.schedule {
+  width: 200px;
+  height: 40px;
+  padding: 8px 15px;
+  border-radius: 7px;
+  border-style: none;
+  color: white;
+}
+
+.schedule:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -108,21 +122,35 @@ nav button.contact {
 }
 #home {
   display: flex;
+  align-items: center;
+  margin-top: 2rem;
 }
 
 .first-column {
   display: flex;
   flex-direction: column;
+  margin-top: -4rem;
+  letter-spacing: -0.1rem;
 }
 .first-column h1 {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 .first-column h1 span {
-  color: purple;
+  color: #8d00bf;
+}
+.first-column h2 {
+  margin-top: -1rem;
+  font-size: 2.2rem;
+  font-weight: lighter;
+}
+.first-column .schedule {
+  background-color: #8d00bf;
 }
 
 .second-column img {
-  width: 200px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 9px 15px purple;
 }
 
 *,
