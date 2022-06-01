@@ -1,1 +1,10 @@
 @use "../index" as i;
+
+.first-column {
+  display: flex;
+}
+
+h1 {
+  font-size: i.$font-size-xl;
+  color: red;
+}
