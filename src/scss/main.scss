@@ -11,6 +11,14 @@ body {
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 2rem;
+  margin: auto;
+  font-family: i.$font-family;
+}
+
 @media (min-width: 1400px) {
   body {
     max-width: 1000px;
@@ -21,13 +29,4 @@ body {
   body {
     padding-inline: 0.75rem;
   }
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding-inline: 2rem;
-  margin: auto;
-  font-family: i.$font-family;
 }

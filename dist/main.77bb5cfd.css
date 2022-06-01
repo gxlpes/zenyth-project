@@ -49,6 +49,7 @@ nav button.contact {
   height: 3px;
   background: #5a5a5a;
   margin: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
@@ -62,16 +63,17 @@ nav button.contact {
 
   nav ul {
     position: absolute;
+    top: 8vh;
     right: 0;
     height: 60vh;
-    top: 8vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 4rem;
     width: 50%;
     background-color: white;
     transform: translateX(100%);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 
   nav li {
@@ -80,6 +82,28 @@ nav button.contact {
 
   .nav-active {
     transform: translateX(0%);
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 }
 *,
@@ -92,6 +116,14 @@ body {
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 2rem;
+  margin: auto;
+  font-family: "Merriweather", serif;
+}
+
 @media (min-width: 1400px) {
   body {
     max-width: 1000px;
@@ -101,14 +133,6 @@ body {
   body {
     padding-inline: 0.75rem;
   }
-}
-body {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding-inline: 2rem;
-  margin: auto;
-  font-family: "Merriweather", serif;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

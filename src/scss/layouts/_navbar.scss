@@ -44,6 +44,7 @@ nav {
   height: 3px;
   background: i.$clr-text;
   margin: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
@@ -57,23 +58,47 @@ nav {
 
   nav ul {
     position: absolute;
+    top: 8vh;
     right: 0;
     height: 60vh;
-    top: 8vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 4rem;
     width: 50%;
     background-color: white;
     transform: translateX(100%);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 
   nav li {
     opacity: 0;
   }
 
+  //JavaScript mobile navbar
+
   .nav-active {
     transform: translateX(0%);
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 }
