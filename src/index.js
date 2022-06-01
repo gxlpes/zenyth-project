@@ -23,3 +23,12 @@ const navSlide = () => {
 navSlide();
 
 // modal window
+const btnOpenModal = document.querySelector(".show-schedule");
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const btnCloseModal = document.querySelector(".close-modal");
+
+btnOpenModal.addEventListener("click", () => {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+});

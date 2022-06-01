@@ -139,6 +139,15 @@ var navSlide = function navSlide() {
 };
 
 navSlide(); // modal window
+
+var btnOpenModal = document.querySelector(".show-schedule");
+var modal = document.querySelector(".modal");
+var overlay = document.querySelector(".overlay");
+var btnCloseModal = document.querySelector(".close-modal");
+btnOpenModal.addEventListener("click", function () {
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

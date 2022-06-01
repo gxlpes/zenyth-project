@@ -10,7 +10,7 @@
   cursor: pointer;
 }
 
-.schedule {
+.show-schedule {
   width: 200px;
   height: 40px;
   padding: 8px 15px;
@@ -19,7 +19,7 @@
   color: white;
 }
 
-.schedule:hover {
+.show-schedule:hover {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -143,7 +143,7 @@ nav button.contact {
   font-size: 2.2rem;
   font-weight: lighter;
 }
-.first-column .schedule {
+.first-column .show-schedule {
   background-color: #8d00bf;
 }
 
@@ -155,6 +155,31 @@ nav button.contact {
 
 .hidden {
   display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  background-color: grey;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem black;
+  z-index: 10;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+  transition: all 5s ease-in-out;
 }
 
 *,
