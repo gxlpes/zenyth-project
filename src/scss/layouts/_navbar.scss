@@ -60,9 +60,10 @@ nav {
     position: absolute;
     top: 8vh;
     right: 0;
-    height: 60vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 4rem;
     width: 50%;
