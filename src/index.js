@@ -29,6 +29,7 @@ const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".close-modal");
 
 const openModal = () => {
+  e.preventDefault();
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 };

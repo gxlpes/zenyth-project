@@ -146,6 +146,7 @@ var overlay = document.querySelector(".overlay");
 var btnCloseModal = document.querySelector(".close-modal");
 
 var openModal = function openModal() {
+  e.preventDefault();
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
 };
@@ -191,7 +192,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52765" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62046" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
