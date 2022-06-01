@@ -21,3 +21,5 @@ const navSlide = () => {
 };
 
 navSlide();
+
+// modal window
