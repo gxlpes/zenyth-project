@@ -71,10 +71,15 @@ nav button.contact {
     width: 50%;
     background-color: white;
     transform: translateX(100%);
+    transition: all 0.2s ease-in-out;
   }
 
   nav li {
     opacity: 0;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
   }
 }
 *,
@@ -84,20 +89,26 @@ nav button.contact {
 }
 
 body {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  font-family: "Merriweather", serif;
-  max-width: 45rem;
 }
 
-@media screen and (max-width: 764px) {
+@media (min-width: 1400px) {
   body {
-    max-width: 23rem;
+    max-width: 1000px;
   }
+}
+@media (min-width: 768px) {
+  body {
+    padding-inline: 0.75rem;
+  }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-inline: 2rem;
+  margin: auto;
+  font-family: "Merriweather", serif;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

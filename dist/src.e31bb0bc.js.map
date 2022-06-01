@@ -1,0 +1,22 @@
+{
+  "version": 3,
+  "sources": [
+    "index.js"
+  ],
+  "names": [
+    "navSlide",
+    "burguer",
+    "document",
+    "querySelector",
+    "nav",
+    "addEventListener",
+    "classList",
+    "toggle"
+  ],
+  "mappings": "AAAA,IAAMA,QAAQ,GAAG,SAAXA,QAAW,GAAM;EACrB,IAAMC,OAAO,GAAGC,QAAQ,CAACC,aAAT,CAAuB,UAAvB,CAAhB;EACA,IAAMC,GAAG,GAAGF,QAAQ,CAACC,aAAT,CAAuB,WAAvB,CAAZ;EAEAF,OAAO,CAACI,gBAAR,CAAyB,OAAzB,EAAkC,YAAM;IACtCD,GAAG,CAACE,SAAJ,CAAcC,MAAd,CAAqB,YAArB;EACD,CAFD;AAGD,CAPD;;AASAP,QAAQ",
+  "file": "src.e31bb0bc.js",
+  "sourceRoot": "..\\src",
+  "sourcesContent": [
+    "const navSlide = () => {\r\n  const burguer = document.querySelector(\".burguer\");\r\n  const nav = document.querySelector(\"nav-links\");\r\n\r\n  burguer.addEventListener(\"click\", () => {\r\n    nav.classList.toggle(\"nav-active\");\r\n  });\r\n};\r\n\r\nnavSlide();\r\n"
+  ]
+}
