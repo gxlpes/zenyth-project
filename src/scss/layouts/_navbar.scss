@@ -14,11 +14,11 @@ nav {
     text-decoration: none;
     color: i.$clr-text;
     transition: all 0.2s ease-in-out;
+  }
 
-    a:hover {
-      color: i.$clr-purple1;
-      font-weight: 800;
-    }
+  a:hover {
+    color: i.$clr-purple1;
+    font-weight: 800;
   }
 
   ul {

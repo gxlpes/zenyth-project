@@ -24,7 +24,7 @@ nav a {
   color: #5a5a5a;
   transition: all 0.2s ease-in-out;
 }
-nav a a:hover {
+nav a:hover {
   color: #8d00bf;
   font-weight: 800;
 }
