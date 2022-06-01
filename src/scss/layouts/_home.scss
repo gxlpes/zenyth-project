@@ -1,10 +1,22 @@
 @use "../index" as i;
 
-.first-column {
+#home {
   display: flex;
 }
 
-h1 {
-  font-size: i.$font-size-xl;
-  color: red;
+.first-column {
+  display: flex;
+  flex-direction: column;
+  h1 {
+    font-size: i.$font-size-xl;
+    span {
+      color: purple;
+    }
+  }
+}
+
+.second-column {
+  img {
+    width: 200px;
+  }
 }

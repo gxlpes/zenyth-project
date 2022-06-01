@@ -106,6 +106,25 @@ nav button.contact {
     transform: rotate(45deg) translate(-5px, -6px);
   }
 }
+#home {
+  display: flex;
+}
+
+.first-column {
+  display: flex;
+  flex-direction: column;
+}
+.first-column h1 {
+  font-size: 2rem;
+}
+.first-column h1 span {
+  color: purple;
+}
+
+.second-column img {
+  width: 200px;
+}
+
 *,
 *::before,
 *::after {
@@ -122,6 +141,7 @@ body {
   padding-inline: 2rem;
   margin: auto;
   font-family: "Merriweather", serif;
+  color: #5a5a5a;
 }
 
 @media (min-width: 1400px) {

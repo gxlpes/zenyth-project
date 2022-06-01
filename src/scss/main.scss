@@ -1,5 +1,7 @@
 @use "./index" as i;
+
 @use "./layouts/navbar";
+@use "./layouts/home";
 
 *,
 *::before,
@@ -17,6 +19,7 @@ body {
   padding-inline: 2rem;
   margin: auto;
   font-family: i.$font-family;
+  color: i.$clr-text;
 }
 
 @media (min-width: 1400px) {
