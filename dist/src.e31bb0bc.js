@@ -144,14 +144,20 @@ var btnOpenModal = document.querySelector(".show-schedule");
 var modal = document.querySelector(".modal");
 var overlay = document.querySelector(".overlay");
 var btnCloseModal = document.querySelector(".close-modal");
-btnOpenModal.addEventListener("click", function () {
+
+var openModal = function openModal() {
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
-});
-btnCloseModal.addEventListener("click", function () {
+};
+
+var closeModal = function closeModal() {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
-});
+};
+
+btnOpenModal.addEventListener("click", openModal);
+btnCloseModal.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

@@ -169,6 +169,7 @@ nav button.contact {
   border-radius: 5px;
   box-shadow: 0 3rem 5rem black;
   z-index: 10;
+  animation: all 0.5s ease-in-out;
 }
 
 .overlay {
@@ -180,7 +181,8 @@ nav button.contact {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
   z-index: 5;
-  transition: all 5s ease-in-out;
+  animation: overlay 0.2s ease-in-out;
+  animation: close 0.2s ease-in-out;
 }
 
 .close-modal {
