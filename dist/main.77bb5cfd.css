@@ -1,5 +1,6 @@
 .contact {
-  padding: 8px 15px;
+  font-family: "Merriweather", serif;
+  padding: 10px 15px;
   border-radius: 7px;
   border-style: none;
   color: white;
@@ -11,8 +12,9 @@
 }
 
 .show-schedule {
-  width: 200px;
-  height: 40px;
+  font-family: "Merriweather", serif;
+  width: 120px;
+  height: 50px;
   padding: 8px 15px;
   border-radius: 7px;
   border-style: none;
@@ -165,10 +167,12 @@ nav button.contact {
 #home {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   margin-top: 2rem;
 }
 
 .first-column {
+  width: 40%;
   display: flex;
   flex-direction: column;
   margin-top: -4rem;
@@ -190,11 +194,22 @@ nav button.contact {
 }
 
 .second-column img {
-  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
   border-radius: 12px;
   box-shadow: 15px 15px #8d00bf;
 }
 
+@media screen and (max-width: 768px) {
+  #home {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+}
 *,
 *::before,
 *::after {

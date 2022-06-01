@@ -1,5 +1,8 @@
+@use "./src/scss/base/fonts";
+
 .contact {
-  padding: 8px 15px;
+  font-family: fonts.$font-family;
+  padding: 10px 15px;
   border-radius: 7px;
   border-style: none;
   color: white;
@@ -11,8 +14,9 @@
 }
 
 .show-schedule {
-  width: 200px;
-  height: 40px;
+  font-family: fonts.$font-family;
+  width: 120px;
+  height: 50px;
   padding: 8px 15px;
   border-radius: 7px;
   border-style: none;
