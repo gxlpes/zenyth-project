@@ -23,12 +23,12 @@ const navSlide = () => {
 navSlide();
 
 // modal window
-const btnOpenModal = document.querySelector(".show-schedule");
+const btnsOpenModal = document.querySelectorAll(".show-modal");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
 const btnCloseModal = document.querySelector(".close-modal");
 
-const openModal = () => {
+const openModal = (e) => {
   e.preventDefault();
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
@@ -39,11 +39,12 @@ const closeModal = () => {
   overlay.classList.add("hidden");
 };
 
-btnOpenModal.addEventListener("click", openModal);
+btnsOpenModal.forEach((btn) => btn.addEventListener("click", openModal));
 btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 
 document.addEventListener("keydown", (e) => {
+  console.log(e.key);
   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
     closeModal();
   }

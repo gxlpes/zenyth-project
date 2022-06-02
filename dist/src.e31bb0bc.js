@@ -140,12 +140,12 @@ var navSlide = function navSlide() {
 
 navSlide(); // modal window
 
-var btnOpenModal = document.querySelector(".show-schedule");
+var btnsOpenModal = document.querySelectorAll(".show-modal");
 var modal = document.querySelector(".modal");
 var overlay = document.querySelector(".overlay");
 var btnCloseModal = document.querySelector(".close-modal");
 
-var openModal = function openModal() {
+var openModal = function openModal(e) {
   e.preventDefault();
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
@@ -156,10 +156,14 @@ var closeModal = function closeModal() {
   overlay.classList.add("hidden");
 };
 
-btnOpenModal.addEventListener("click", openModal);
+btnsOpenModal.forEach(function (btn) {
+  return btn.addEventListener("click", openModal);
+});
 btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 document.addEventListener("keydown", function (e) {
+  console.log(e.key);
+
   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
     closeModal();
   }
