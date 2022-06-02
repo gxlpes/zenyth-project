@@ -143,11 +143,11 @@ navSlide(); // cookies message
 var nav = document.querySelector("nav");
 var message = document.createElement("div");
 message.classList.add("cookie-message");
-message.innerHTML = 'We use cookies for analytics and perfomance of your website. <button class="cookie-close">Close</button>';
+message.innerHTML = 'We use cookies for analytics and perfomance of our website. <button class="cookie-close">Close</button>';
 nav.before(message);
 document.querySelector(".cookie-close").addEventListener("click", function () {
   return message.remove();
-}); // modal window
+}); // modal window setup
 
 var btnsOpenModal = document.querySelectorAll(".show-modal");
 var modal = document.querySelector(".modal");

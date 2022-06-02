@@ -26,12 +26,12 @@ navSlide();
 const nav = document.querySelector("nav");
 const message = document.createElement("div");
 message.classList.add("cookie-message");
-message.innerHTML = 'We use cookies for analytics and perfomance of your website. <button class="cookie-close">Close</button>';
+message.innerHTML = 'We use cookies for analytics and perfomance of our website. <button class="cookie-close">Close</button>';
 nav.before(message);
 
 document.querySelector(".cookie-close").addEventListener("click", () => message.remove());
 
-// modal window
+// modal window setup
 const btnsOpenModal = document.querySelectorAll(".show-modal");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
