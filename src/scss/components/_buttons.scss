@@ -6,6 +6,7 @@
   border-radius: 7px;
   border-style: none;
   color: white;
+  transition: all 0.5s ease-in-out;
 }
 
 .contact:hover {
@@ -13,17 +14,18 @@
   cursor: pointer;
 }
 
-.show-modal {
+.schedule {
   font-family: fonts.$font-family;
-  width: 120px;
+  width: 220px;
   height: 50px;
   padding: 8px 15px;
   border-radius: 7px;
   border-style: none;
   color: white;
+  transition: all 0.5s ease-in-out;
 }
 
-.show-modal:hover {
+.schedule:hover {
   opacity: 0.8;
   cursor: pointer;
 }

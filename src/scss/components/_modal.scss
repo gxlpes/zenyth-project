@@ -1,5 +1,6 @@
 .hidden {
   display: none;
+  animation: close-modal 0.5s ease-in-out;
 }
 
 .modal {
@@ -14,7 +15,7 @@
   border-radius: 5px;
   box-shadow: 0 3rem 5rem black;
   z-index: 10;
-  animation: all 0.5s ease-in-out;
+  animation: open-modal 0.5s ease-in-out;
 }
 
 .overlay {
@@ -26,8 +27,7 @@
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(5px);
   z-index: 5;
-  animation: overlay 0.2s ease-in-out;
-  animation: close 0.2s ease-in-out;
+  animation: open-modal 0.5s ease-in-out;
 }
 
 .close-modal {
@@ -38,4 +38,22 @@
   cursor: pointer;
   border: none;
   background: none;
+}
+
+@keyframes open-modal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes close-modal {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

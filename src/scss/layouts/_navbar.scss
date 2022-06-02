@@ -13,12 +13,12 @@ nav {
   a {
     text-decoration: none;
     color: i.$clr-text;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.4s ease-in-out;
   }
 
   a:hover {
     color: i.$clr-purple1;
-    font-weight: 800;
+    font-weight: 500;
   }
 
   ul {
@@ -46,6 +46,20 @@ nav {
   margin: 5px;
   transition: all 0.3s ease-in-out;
 }
+
+// cookies message
+.cookie-message {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: white;
+  color: #bbb;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+// mobile version of navbar
 
 @media screen and (max-width: 768px) {
   body {

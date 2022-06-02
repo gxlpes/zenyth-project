@@ -138,7 +138,8 @@ var navSlide = function navSlide() {
   });
 };
 
-navSlide(); // modal window
+navSlide(); // cookies message
+// modal window
 
 var btnsOpenModal = document.querySelectorAll(".show-modal");
 var modal = document.querySelector(".modal");
