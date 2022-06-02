@@ -11,7 +11,7 @@
   cursor: pointer;
 }
 
-.show-schedule {
+.show-modal {
   font-family: "Merriweather", serif;
   width: 120px;
   height: 50px;
@@ -21,7 +21,7 @@
   color: white;
 }
 
-.show-schedule:hover {
+.show-modal:hover {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -190,7 +190,7 @@ nav button.contact {
   font-size: clamp(1rem, 1.5rem + 1vw, 2.2rem);
   font-weight: lighter;
 }
-.first-column .show-schedule {
+.first-column .show-modal {
   background-color: #8d00bf;
 }
 
