@@ -49,13 +49,17 @@ nav {
 
 // cookies message
 .cookie-message {
+  background-color: rgba(141, 141, 141, 0.529);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 100%;
-  background-color: white;
-  color: #bbb;
-  font-size: 1.5rem;
+  margin-inline: auto;
+  margin-top: 0.4rem;
+  padding: 0.2rem;
+  width: 55%;
+  border-radius: 7px;
+  font-size: 0.8rem;
   font-weight: 400;
 }
 

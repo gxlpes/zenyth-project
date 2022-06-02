@@ -139,7 +139,15 @@ var navSlide = function navSlide() {
 };
 
 navSlide(); // cookies message
-// modal window
+
+var nav = document.querySelector("nav");
+var message = document.createElement("div");
+message.classList.add("cookie-message");
+message.innerHTML = 'We use cookies for analytics and perfomance of your website. <button class="cookie-close">Close</button>';
+nav.before(message);
+document.querySelector(".cookie-close").addEventListener("click", function () {
+  return message.remove();
+}); // modal window
 
 var btnsOpenModal = document.querySelectorAll(".show-modal");
 var modal = document.querySelector(".modal");
@@ -197,7 +205,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49871" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54539" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
