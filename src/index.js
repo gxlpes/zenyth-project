@@ -22,6 +22,8 @@ const navSlide = () => {
 
 navSlide();
 
+// cookies message
+
 // modal window
 const btnsOpenModal = document.querySelectorAll(".show-modal");
 const modal = document.querySelector(".modal");
