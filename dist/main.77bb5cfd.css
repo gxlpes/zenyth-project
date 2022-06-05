@@ -273,6 +273,10 @@ nav button.contact {
     width: 100%;
   }
 }
+svg {
+  color: black;
+}
+
 *,
 *::before,
 *::after {
