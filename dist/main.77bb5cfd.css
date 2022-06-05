@@ -250,7 +250,7 @@ nav button.contact {
   font-size: clamp(1rem, 1.5rem + 1vw, 2.2rem);
   font-weight: lighter;
 }
-.first-column .show-modal.schedule {
+.first-column .schedule {
   background-color: #8d00bf;
 }
 
