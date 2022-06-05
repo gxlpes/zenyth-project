@@ -185,7 +185,7 @@ btnScrollTo.addEventListener("click", function (e) {
   console.log(sectionApptCoords);
   console.log(e.target.getBoundingClientRect()); //scrolling
 
-  window.scrollTo(sectionApptCoords.left, sectionApptCoords.top);
+  window.scrollTo(sectionApptCoords.left + window.pageXOffset, sectionApptCoords.top + window.pageYOffset);
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];

@@ -7,11 +7,6 @@
   transition: all 0.5s ease-in-out;
 }
 
-.contact:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-
 .schedule {
   font-family: "Merriweather", serif;
   width: 220px;
@@ -23,7 +18,9 @@
   transition: all 0.5s ease-in-out;
 }
 
-.schedule:hover {
+.contact:hover,
+.schedule:hover,
+.cookie-close:hover {
   opacity: 0.8;
   cursor: pointer;
 }
@@ -145,7 +142,7 @@ nav button.contact {
 }
 
 .cookie-message {
-  background-color: rgba(141, 141, 141, 0.529);
+  background-color: rgba(69, 69, 69, 0.529);
   color: white;
   display: flex;
   align-items: center;

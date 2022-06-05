@@ -69,5 +69,5 @@ btnScrollTo.addEventListener("click", function (e) {
   console.log(e.target.getBoundingClientRect());
 
   //scrolling
-  window.scrollTo(sectionApptCoords.left, sectionApptCoords.top);
+  window.scrollTo(sectionApptCoords.left + window.pageXOffset, sectionApptCoords.top + window.pageYOffset);
 });
