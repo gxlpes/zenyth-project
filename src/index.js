@@ -58,3 +58,5 @@ document.addEventListener("keydown", (e) => {
     closeModal();
   }
 });
+
+//smooth scrolling button
