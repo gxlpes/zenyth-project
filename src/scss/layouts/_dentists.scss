@@ -1,4 +1,79 @@
+@use "../index" as i;
+
 svg {
   width: 2rem;
-  fill: #e1e1e1;
+  fill: i.$clr-lightgray;
+}
+
+#dentists {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-box {
+  margin-block: 2rem;
+  margin-inline-end: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  h1 {
+    font-size: clamp(0.5rem, 0.5rem + 1.2vw, 0.5rem + i.$font-size-xl);
+    span {
+      color: i.$clr-purple1;
+    }
+  }
+
+  h3 {
+    margin-top: -1rem;
+    font-size: clamp(1rem, 0.5rem + 0.8vw, i.$font-size-l);
+    font-weight: lighter;
+  }
+
+  .line {
+    margin-top: -0.5rem;
+    width: 20rem;
+    height: 1rem;
+    background-color: i.$clr-purple1;
+    border-radius: 5px;
+  }
+}
+
+.cards-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  .retang {
+    position: relative;
+    top: 2rem;
+    z-index: -1;
+    width: 60vw;
+    height: 10rem;
+    background-color: i.$clr-purple1;
+    border-radius: 8px;
+  }
+
+  .dr-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8rem;
+  }
+
+  .drs {
+    margin-top: -5rem;
+    img {
+      width: 180px;
+      height: 250px;
+      border-radius: 10px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  }
 }
