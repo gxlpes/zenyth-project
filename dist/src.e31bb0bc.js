@@ -177,6 +177,16 @@ document.addEventListener("keydown", function (e) {
     closeModal();
   }
 }); //smooth scrolling button
+
+var btnScrollTo = document.querySelector(".btn-scrollTo");
+var sectionAppt = document.querySelector("#appointment");
+btnScrollTo.addEventListener("click", function (e) {
+  var sectionApptCoords = sectionAppt.getBoundingClientRect();
+  console.log(sectionApptCoords);
+  console.log(e.target.getBoundingClientRect()); //scrolling
+
+  window.scrollTo(sectionApptCoords.left, sectionApptCoords.top);
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

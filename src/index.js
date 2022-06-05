@@ -60,3 +60,14 @@ document.addEventListener("keydown", (e) => {
 });
 
 //smooth scrolling button
+const btnScrollTo = document.querySelector(".btn-scrollTo");
+const sectionAppt = document.querySelector("#appointment");
+
+btnScrollTo.addEventListener("click", function (e) {
+  const sectionApptCoords = sectionAppt.getBoundingClientRect();
+  console.log(sectionApptCoords);
+  console.log(e.target.getBoundingClientRect());
+
+  //scrolling
+  window.scrollTo(sectionApptCoords.left, sectionApptCoords.top);
+});
