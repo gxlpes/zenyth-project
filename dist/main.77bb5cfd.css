@@ -227,6 +227,7 @@ nav button.contact {
   align-items: center;
   justify-content: space-evenly;
   margin-top: 2rem;
+  scroll-margin-top: 20rem;
 }
 
 .first-column {
@@ -276,6 +277,10 @@ nav button.contact {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+:root {
+  scroll-behavior: smooth;
 }
 
 body {

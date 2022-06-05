@@ -59,15 +59,20 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-//smooth scrolling button
+// smooth scrolling button
 const btnScrollTo = document.querySelector(".btn-scrollTo");
 const sectionAppt = document.querySelector("#appointment");
 
 btnScrollTo.addEventListener("click", function (e) {
   const sectionApptCoords = sectionAppt.getBoundingClientRect();
-  console.log(sectionApptCoords);
-  console.log(e.target.getBoundingClientRect());
-
-  //scrolling
-  window.scrollTo(sectionApptCoords.left + window.pageXOffset, sectionApptCoords.top + window.pageYOffset);
+  // console.log coords
+  // console.log(sectionApptCoords);
+  // console.log(e.target.getBoundingClientRect());
+  window.scrollTo({
+    left: sectionApptCoords.left + window.pageXOffset,
+    top: sectionApptCoords.top + window.pageYOffset,
+    behavior: "smooth",
+  });
+  // newest method used
+  // sectionAppt.scrollIntoView({ behavior: "smooth" });
 });

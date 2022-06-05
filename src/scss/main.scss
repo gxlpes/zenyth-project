@@ -9,6 +9,10 @@
   box-sizing: inherit;
 }
 
+:root {
+  scroll-behavior: smooth;
+}
+
 body {
   box-sizing: border-box;
 }

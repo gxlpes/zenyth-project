@@ -176,16 +176,21 @@ document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
     closeModal();
   }
-}); //smooth scrolling button
+}); // smooth scrolling button
 
 var btnScrollTo = document.querySelector(".btn-scrollTo");
 var sectionAppt = document.querySelector("#appointment");
 btnScrollTo.addEventListener("click", function (e) {
-  var sectionApptCoords = sectionAppt.getBoundingClientRect();
-  console.log(sectionApptCoords);
-  console.log(e.target.getBoundingClientRect()); //scrolling
+  var sectionApptCoords = sectionAppt.getBoundingClientRect(); // console.log coords
+  // console.log(sectionApptCoords);
+  // console.log(e.target.getBoundingClientRect());
 
-  window.scrollTo(sectionApptCoords.left + window.pageXOffset, sectionApptCoords.top + window.pageYOffset);
+  window.scrollTo({
+    left: sectionApptCoords.left + window.pageXOffset,
+    top: sectionApptCoords.top + window.pageYOffset,
+    behavior: "smooth"
+  }); // newest method used
+  // sectionAppt.scrollIntoView({ behavior: "smooth" });
 });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
