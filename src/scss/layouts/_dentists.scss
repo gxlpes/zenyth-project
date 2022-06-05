@@ -1,10 +1,5 @@
 @use "../index" as i;
 
-svg {
-  width: 2rem;
-  fill: i.$clr-lightgray;
-}
-
 #dentists {
   display: flex;
   align-items: center;
@@ -18,14 +13,15 @@ svg {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  h1 {
+
+  .title-dentists {
     font-size: clamp(0.5rem, 0.5rem + 1.2vw, 0.5rem + i.$font-size-xl);
     span {
       color: i.$clr-purple1;
     }
   }
 
-  h3 {
+  .subtitle-dentists {
     margin-top: -1rem;
     font-size: clamp(1rem, 0.5rem + 0.8vw, i.$font-size-l);
     font-weight: lighter;
@@ -65,15 +61,36 @@ svg {
   }
 
   .drs {
+    display: flex;
+    flex-direction: column;
+    gap: -50rem;
     margin-top: -5rem;
+
     img {
       width: 180px;
       height: 250px;
       border-radius: 10px;
+      margin-bottom: 1rem;
     }
+
     ul {
       list-style: none;
       padding: 0;
+    }
+
+    h2,
+    h4 {
+      margin-block: 0.2rem;
+    }
+
+    .svg-box {
+      display: flex;
+      flex-direction: row;
+      gap: 0.8rem;
+      svg {
+        width: 2rem;
+        fill: i.$clr-lightgray;
+      }
     }
   }
 }

@@ -273,11 +273,6 @@ nav button.contact {
     width: 100%;
   }
 }
-svg {
-  width: 2rem;
-  fill: #e1e1e1;
-}
-
 #dentists {
   display: flex;
   align-items: center;
@@ -292,13 +287,13 @@ svg {
   flex-direction: column;
   align-items: flex-start;
 }
-.text-box h1 {
+.text-box .title-dentists {
   font-size: clamp(0.5rem, 0.5rem + 1.2vw, 3.5rem);
 }
-.text-box h1 span {
+.text-box .title-dentists span {
   color: #8d00bf;
 }
-.text-box h3 {
+.text-box .subtitle-dentists {
   margin-top: -1rem;
   font-size: clamp(1rem, 0.5rem + 0.8vw, 2.2rem);
   font-weight: lighter;
@@ -334,16 +329,33 @@ svg {
   gap: 8rem;
 }
 .cards-box .drs {
+  display: flex;
+  flex-direction: column;
+  gap: -50rem;
   margin-top: -5rem;
 }
 .cards-box .drs img {
   width: 180px;
   height: 250px;
   border-radius: 10px;
+  margin-bottom: 1rem;
 }
 .cards-box .drs ul {
   list-style: none;
   padding: 0;
+}
+.cards-box .drs h2,
+.cards-box .drs h4 {
+  margin-block: 0.2rem;
+}
+.cards-box .drs .svg-box {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+}
+.cards-box .drs .svg-box svg {
+  width: 2rem;
+  fill: #e1e1e1;
 }
 
 *,
