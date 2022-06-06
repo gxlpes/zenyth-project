@@ -342,6 +342,11 @@ nav button.contact {
   height: 250px;
   border-radius: 10px;
   margin-bottom: 1rem;
+  transition: all 0.4s ease-in-out;
+}
+.cards-box .drs img:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.109);
 }
 .cards-box .drs ul {
   list-style: none;
@@ -359,6 +364,12 @@ nav button.contact {
 .cards-box .drs .svg-box svg {
   width: 2rem;
   fill: #e1e1e1;
+  transition: all 0.4s ease-in-out;
+}
+.cards-box .drs .svg-box svg:hover {
+  transform: scale(1.2);
+  fill: #8d00bf;
+  cursor: pointer;
 }
 
 *,

@@ -74,6 +74,12 @@
       height: 250px;
       border-radius: 10px;
       margin-bottom: 1rem;
+      transition: all 0.4s ease-in-out;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.109);
     }
 
     ul {
@@ -93,6 +99,13 @@
       svg {
         width: 2rem;
         fill: i.$clr-lightgray;
+        transition: all 0.4s ease-in-out;
+      }
+
+      svg:hover {
+        transform: scale(1.2);
+        fill: i.$clr-purple1;
+        cursor: pointer;
       }
     }
   }
