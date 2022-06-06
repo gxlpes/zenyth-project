@@ -76,3 +76,12 @@ btnScrollTo.addEventListener("click", function (e) {
   // newest method used
   // sectionAppt.scrollIntoView({ behavior: "smooth" });
 });
+
+// random color rgb
+const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+const randomColor = () => `rgb(${randomInt(0, 255)}, ${randomInt(0, 255)}, ${randomInt(0, 255)})`;
+console.log(randomColor(0, 255));
+
+document.querySelector(".nav-link").addEventListener("click", function (e) {
+  this.style.backgroundColor = randomColor();
+});
