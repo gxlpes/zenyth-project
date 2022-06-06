@@ -196,6 +196,7 @@ btnScrollTo.addEventListener("click", function (e) {
   // sectionAppt.scrollIntoView({ behavior: "smooth" });
 }); //1. Add event listener to common parent element
 //2. Determine what element originated the event
+// smooth scrolling to the section
 
 document.querySelector(".nav-links").addEventListener("click", function (e) {
   e.preventDefault(); // Matching strategy
