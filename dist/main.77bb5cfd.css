@@ -115,7 +115,7 @@ nav a {
 }
 nav a:hover {
   color: #8d00bf;
-  font-weight: 500;
+  font-weight: 600;
 }
 nav ul {
   display: flex;

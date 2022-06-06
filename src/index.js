@@ -85,3 +85,7 @@ console.log(randomColor(0, 255));
 document.querySelector(".nav-link").addEventListener("click", function (e) {
   this.style.backgroundColor = randomColor();
 });
+
+document.querySelector(".nav-links").addEventListener("click", function (e) {
+  this.style.backgroundColor = randomColor();
+});

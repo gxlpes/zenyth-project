@@ -205,6 +205,9 @@ console.log(randomColor(0, 255));
 document.querySelector(".nav-link").addEventListener("click", function (e) {
   this.style.backgroundColor = randomColor();
 });
+document.querySelector(".nav-links").addEventListener("click", function (e) {
+  this.style.backgroundColor = randomColor();
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
