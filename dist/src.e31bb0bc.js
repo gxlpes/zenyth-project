@@ -138,7 +138,8 @@ var navSlide = function navSlide() {
   });
 };
 
-navSlide(); // cookies message
+navSlide(); //////////////////////////////////////////////////////////////////////////////////
+// cookies message
 
 var nav = document.querySelector("nav");
 var message = document.createElement("div");
@@ -147,7 +148,8 @@ message.innerHTML = 'We use cookies for analytics and perfomance of our website.
 nav.before(message);
 document.querySelector(".cookie-close").addEventListener("click", function () {
   return message.remove();
-}); // modal window setup
+}); //////////////////////////////////////////////////////////////////////////////////
+// modal window setup
 
 var btnsOpenModal = document.querySelectorAll(".show-modal");
 var modal = document.querySelector(".modal");
@@ -176,7 +178,8 @@ document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
     closeModal();
   }
-}); // smooth scrolling button
+}); //////////////////////////////////////////////////////////////////////////////////
+// smooth scrolling button
 
 var btnScrollTo = document.querySelector(".btn-scrollTo");
 var sectionAppt = document.querySelector("#appointment");
@@ -191,23 +194,25 @@ btnScrollTo.addEventListener("click", function (e) {
     behavior: "smooth"
   }); // newest method used
   // sectionAppt.scrollIntoView({ behavior: "smooth" });
-}); // random color rgb
-
-var randomInt = function randomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-};
-
-var randomColor = function randomColor() {
-  return "rgb(".concat(randomInt(0, 255), ", ").concat(randomInt(0, 255), ", ").concat(randomInt(0, 255), ")");
-};
-
-console.log(randomColor(0, 255));
-document.querySelector(".nav-link").addEventListener("click", function (e) {
-  this.style.backgroundColor = randomColor();
 });
-document.querySelector(".nav-links").addEventListener("click", function (e) {
-  this.style.backgroundColor = randomColor();
-});
+document.querySelectorAll(".nav-link").forEach(function (el) {
+  el.addEventListener("click", function (e) {
+    e.preventDefault();
+    console.log("link");
+  });
+}); // // random color rgb
+// const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+// const randomColor = () => `rgb(${randomInt(0, 255)}, ${randomInt(0, 255)}, ${randomInt(0, 255)})`;
+// console.log(randomColor(0, 255));
+// document.querySelector(".nav-link").addEventListener("click", function (e) {
+//   this.style.backgroundColor = randomColor();
+//   console.log("Link", e.target);
+//   e.stopPropagation();
+// });
+// document.querySelector(".nav-links").addEventListener("click", function (e) {
+//   this.style.backgroundColor = randomColor();
+//   console.log("Link", e.target);
+// });
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

@@ -307,26 +307,28 @@ nav button.contact {
 }
 
 .cards-box {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  flex-shrink: 1;
 }
 .cards-box .retang {
   position: relative;
   top: 2rem;
   z-index: -1;
-  width: 60vw;
+  width: 60%;
   height: 10rem;
   background-color: #8d00bf;
   border-radius: 8px;
 }
 .cards-box .dr-box {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  gap: 8rem;
 }
 .cards-box .drs {
   display: flex;

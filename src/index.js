@@ -22,6 +22,7 @@ const navSlide = () => {
 
 navSlide();
 
+//////////////////////////////////////////////////////////////////////////////////
 // cookies message
 const nav = document.querySelector("nav");
 const message = document.createElement("div");
@@ -31,6 +32,7 @@ nav.before(message);
 
 document.querySelector(".cookie-close").addEventListener("click", () => message.remove());
 
+//////////////////////////////////////////////////////////////////////////////////
 // modal window setup
 const btnsOpenModal = document.querySelectorAll(".show-modal");
 const modal = document.querySelector(".modal");
@@ -59,6 +61,7 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+//////////////////////////////////////////////////////////////////////////////////
 // smooth scrolling button
 const btnScrollTo = document.querySelector(".btn-scrollTo");
 const sectionAppt = document.querySelector("#appointment");
@@ -77,15 +80,26 @@ btnScrollTo.addEventListener("click", function (e) {
   // sectionAppt.scrollIntoView({ behavior: "smooth" });
 });
 
-// random color rgb
-const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
-const randomColor = () => `rgb(${randomInt(0, 255)}, ${randomInt(0, 255)}, ${randomInt(0, 255)})`;
-console.log(randomColor(0, 255));
-
-document.querySelector(".nav-link").addEventListener("click", function (e) {
-  this.style.backgroundColor = randomColor();
+document.querySelectorAll(".nav-link").forEach(function (el) {
+  el.addEventListener("click", function (e) {
+    e.preventDefault();
+    console.log("link");
+  });
 });
 
-document.querySelector(".nav-links").addEventListener("click", function (e) {
-  this.style.backgroundColor = randomColor();
-});
+// // random color rgb
+// const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+// const randomColor = () => `rgb(${randomInt(0, 255)}, ${randomInt(0, 255)}, ${randomInt(0, 255)})`;
+// console.log(randomColor(0, 255));
+
+// document.querySelector(".nav-link").addEventListener("click", function (e) {
+//   this.style.backgroundColor = randomColor();
+//   console.log("Link", e.target);
+
+//   e.stopPropagation();
+// });
+
+// document.querySelector(".nav-links").addEventListener("click", function (e) {
+//   this.style.backgroundColor = randomColor();
+//   console.log("Link", e.target);
+// });
