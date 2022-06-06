@@ -80,11 +80,19 @@ btnScrollTo.addEventListener("click", function (e) {
   // sectionAppt.scrollIntoView({ behavior: "smooth" });
 });
 
-document.querySelectorAll(".nav-link").forEach(function (el) {
-  el.addEventListener("click", function (e) {
-    e.preventDefault();
-    console.log("link");
-  });
+//1. Add event listener to common parent element
+//2. Determine what element originated the event
+
+document.querySelector(".nav-links").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // Matching strategy
+  if (e.target.classList.contains("nav-link")) {
+    const id = e.target.getAttribute("href");
+    console.log(e.target);
+    console.log(id);
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
 });
 
 // // random color rgb
