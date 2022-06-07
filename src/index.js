@@ -112,3 +112,15 @@ document.querySelector(".nav-links").addEventListener("click", function (e) {
 //   this.style.backgroundColor = randomColor();
 //   console.log("Link", e.target);
 // });
+
+// reveal sections with IntersectionObserver
+const allSections = document.querySelectorAll("section");
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  entry.target.classList.remove("section-hidden");
+};
+const sectionObserver = new IntersectionObserver(revealSection, { root: null, threshold: 0.15 });
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add("section-hidden");
+});
