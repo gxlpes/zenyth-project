@@ -118,6 +118,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"index.js":[function(require,module,exports) {
+"use strict";
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -242,7 +244,10 @@ var revealSection = function revealSection(entries, observer) {
   var _entries = _slicedToArray(entries, 1),
       entry = _entries[0];
 
+  console.log(entry);
+  if (!entry.isIntersecting) return;
   entry.target.classList.remove("section-hidden");
+  observer.unobserve(entry.target);
 };
 
 var sectionObserver = new IntersectionObserver(revealSection, {
@@ -253,6 +258,7 @@ allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add("section-hidden");
 });
+var navigationHeight = document.querySelector(nav);
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -281,7 +287,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62567" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55772" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

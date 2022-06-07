@@ -1,11 +1,13 @@
 @use "../index" as i;
 
 #dentists {
+  scroll-margin-top: 6rem;
   margin-top: 5rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  transition: all 1s ease-in-out;
 }
 
 .text-box {
@@ -104,7 +106,7 @@
       }
 
       svg:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
         fill: i.$clr-purple1;
         cursor: pointer;
       }

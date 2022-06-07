@@ -274,11 +274,13 @@ nav button.contact {
   }
 }
 #dentists {
+  scroll-margin-top: 6rem;
   margin-top: 5rem;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  transition: all 1s ease-in-out;
 }
 
 .text-box {
@@ -368,7 +370,7 @@ nav button.contact {
   transition: all 0.4s ease-in-out;
 }
 .cards-box .drs .svg-box svg:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   fill: #8d00bf;
   cursor: pointer;
 }
@@ -400,6 +402,46 @@ body {
 .section-hidden {
   opacity: 0;
   transform: translateY(8rem);
+}
+
+@keyframes fadeDown {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeUp {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+nav,
+.cookie-message {
+  animation: fadeUp 1s ease-in-out;
+}
+
+#home .first-column {
+  animation: fadeDown 1s ease-in-out;
+}
+#home .second-column img {
+  animation: opacity 3s ease-in-out;
 }
 
 @media (max-width: 768px) {
