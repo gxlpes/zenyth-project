@@ -132,6 +132,16 @@ allSections.forEach(function (section) {
 
 const navigationHeight = document.querySelector("nav");
 
+// tabbed component
+const tabs = document.querySelectorAll(".about-tab");
+const tabsContainer = document.querySelector(".about-content-container");
+const tabsContent = document.querySelectorAll(".about-content");
+
+tabsContainer.addEventListener("click", function (e) {
+  const clicked = e.target.closest(".about-tab");
+  console.log(clicked);
+});
+
 // menu fade animation
 const handleHover = function (e, opacity) {
   if (e.target.classList.contains("nav-link")) {

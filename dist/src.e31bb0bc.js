@@ -258,7 +258,15 @@ allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add("section-hidden");
 });
-var navigationHeight = document.querySelector("nav"); // menu fade animation
+var navigationHeight = document.querySelector("nav"); // tabbed component
+
+var tabs = document.querySelectorAll(".about-tab");
+var tabsContainer = document.querySelector(".about-content-container");
+var tabsContent = document.querySelectorAll(".about-content");
+tabsContainer.addEventListener("click", function (e) {
+  var clicked = e.target.closest(".about-tab");
+  console.log(clicked);
+}); // menu fade animation
 
 var handleHover = function handleHover(e, opacity) {
   if (e.target.classList.contains("nav-link")) {
@@ -306,7 +314,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58325" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51596" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
