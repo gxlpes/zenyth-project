@@ -26,10 +26,11 @@ navSlide();
 
 //////////////////////////////////////////////////////////////////////////////////
 // sticky navigation
+const navContainer = document.querySelector("nav");
 const sectionAbout = document.querySelector("#about");
 const initialCoords = sectionAbout.getBoundingClientRect();
-if (window.scrollY > initialCoords.top) nav.classList.add("sticky");
-else nav.classList.add("sticky");
+if (window.scrollY > initialCoords.top) navContainer.classList.add("sticky");
+else navContainer.classList.remove("sticky");
 
 //////////////////////////////////////////////////////////////////////////////////
 // cookies message

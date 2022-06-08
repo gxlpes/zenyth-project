@@ -155,9 +155,10 @@ var navSlide = function navSlide() {
 navSlide(); //////////////////////////////////////////////////////////////////////////////////
 // sticky navigation
 
+var navContainer = document.querySelector("nav");
 var sectionAbout = document.querySelector("#about");
 var initialCoords = sectionAbout.getBoundingClientRect();
-if (window.scrollY > initialCoords.top) nav.classList.add("sticky");else nav.classList.add("sticky"); //////////////////////////////////////////////////////////////////////////////////
+if (window.scrollY > initialCoords.top) navContainer.classList.add("sticky");else navContainer.classList.remove("sticky"); //////////////////////////////////////////////////////////////////////////////////
 // cookies message
 
 var nav = document.querySelector("nav");
