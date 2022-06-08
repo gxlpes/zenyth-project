@@ -77,15 +77,15 @@ btnScrollTo.addEventListener("click", function (e) {
 document.querySelector(".nav-links").addEventListener("click", function (e) {
   e.preventDefault();
 
+  //////////////////////////////////////////////////////////////////////////////////
   // Matching
   if (e.target.classList.contains("nav-link")) {
     const id = e.target.getAttribute("href");
-    console.log(e.target);
-    console.log(id);
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   }
 });
 
+//////////////////////////////////////////////////////////////////////////////////
 // reveal sections with IntersectionObserver
 const allSections = document.querySelectorAll("section");
 const revealSection = function (entries, observer) {
@@ -103,6 +103,7 @@ allSections.forEach(function (section) {
 
 const navigationHeight = document.querySelector("nav");
 
+//////////////////////////////////////////////////////////////////////////////////
 // tabbed component
 const tabs = document.querySelectorAll(".about-tab");
 const tabsContainer = document.querySelector(".about-content-container");
@@ -112,18 +113,22 @@ tabsContainer.addEventListener("click", function (e) {
   const clicked = e.target.closest(".about-tab");
   console.log(clicked);
 
+  //////////////////////////////////////////////////////////////////////////////////
   // guard clause
   if (!clicked) return;
 
+  //////////////////////////////////////////////////////////////////////////////////
   //active tab
   tabs.forEach((t) => t.classList.remove("about-tab-active"));
   tabsContent.forEach((c) => c.classList.remove("about-content-active"));
   clicked.classList.add("about-tab-active");
 
+  //////////////////////////////////////////////////////////////////////////////////
   // activate content area
   document.querySelector(`.about-content-${clicked.dataset.tab}`).classList.add("about-content-active");
 });
 
+//////////////////////////////////////////////////////////////////////////////////
 // menu fade animation
 const handleHover = function (e, opacity) {
   if (e.target.classList.contains("nav-link")) {

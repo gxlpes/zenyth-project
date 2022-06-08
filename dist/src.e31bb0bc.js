@@ -205,17 +205,17 @@ btnScrollTo.addEventListener("click", function (e) {
 }); // smooth scrolling to the section
 
 document.querySelector(".nav-links").addEventListener("click", function (e) {
-  e.preventDefault(); // Matching
+  e.preventDefault(); //////////////////////////////////////////////////////////////////////////////////
+  // Matching
 
   if (e.target.classList.contains("nav-link")) {
     var id = e.target.getAttribute("href");
-    console.log(e.target);
-    console.log(id);
     document.querySelector(id).scrollIntoView({
       behavior: "smooth"
     });
   }
-}); // reveal sections with IntersectionObserver
+}); //////////////////////////////////////////////////////////////////////////////////
+// reveal sections with IntersectionObserver
 
 var allSections = document.querySelectorAll("section");
 
@@ -237,16 +237,19 @@ allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add("section-hidden");
 });
-var navigationHeight = document.querySelector("nav"); // tabbed component
+var navigationHeight = document.querySelector("nav"); //////////////////////////////////////////////////////////////////////////////////
+// tabbed component
 
 var tabs = document.querySelectorAll(".about-tab");
 var tabsContainer = document.querySelector(".about-content-container");
 var tabsContent = document.querySelectorAll(".about-content");
 tabsContainer.addEventListener("click", function (e) {
   var clicked = e.target.closest(".about-tab");
-  console.log(clicked); // guard clause
+  console.log(clicked); //////////////////////////////////////////////////////////////////////////////////
+  // guard clause
 
-  if (!clicked) return; //active tab
+  if (!clicked) return; //////////////////////////////////////////////////////////////////////////////////
+  //active tab
 
   tabs.forEach(function (t) {
     return t.classList.remove("about-tab-active");
@@ -254,10 +257,12 @@ tabsContainer.addEventListener("click", function (e) {
   tabsContent.forEach(function (c) {
     return c.classList.remove("about-content-active");
   });
-  clicked.classList.add("about-tab-active"); // activate content area
+  clicked.classList.add("about-tab-active"); //////////////////////////////////////////////////////////////////////////////////
+  // activate content area
 
   document.querySelector(".about-content-".concat(clicked.dataset.tab)).classList.add("about-content-active");
-}); // menu fade animation
+}); //////////////////////////////////////////////////////////////////////////////////
+// menu fade animation
 
 var handleHover = function handleHover(e, opacity) {
   if (e.target.classList.contains("nav-link")) {
