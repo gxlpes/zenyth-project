@@ -198,22 +198,14 @@ document.addEventListener("keydown", function (e) {
 var btnScrollTo = document.querySelector(".btn-scrollTo");
 var sectionAppt = document.querySelector("#appointment");
 btnScrollTo.addEventListener("click", function (e) {
-  var sectionApptCoords = sectionAppt.getBoundingClientRect(); // console.log coords
-  // console.log(sectionApptCoords);
-  // console.log(e.target.getBoundingClientRect());
-
-  window.scrollTo({
-    left: sectionApptCoords.left + window.pageXOffset,
-    top: sectionApptCoords.top + window.pageYOffset,
+  var sectionApptCoords = sectionAppt.getBoundingClientRect();
+  sectionAppt.scrollIntoView({
     behavior: "smooth"
-  }); // newest method used
-  // sectionAppt.scrollIntoView({ behavior: "smooth" });
-}); //1. Add event listener to common parent element
-//2. Determine what element originated the event
-// smooth scrolling to the section
+  });
+}); // smooth scrolling to the section
 
 document.querySelector(".nav-links").addEventListener("click", function (e) {
-  e.preventDefault(); // Matching strategy
+  e.preventDefault(); // Matching
 
   if (e.target.classList.contains("nav-link")) {
     var id = e.target.getAttribute("href");
@@ -223,20 +215,7 @@ document.querySelector(".nav-links").addEventListener("click", function (e) {
       behavior: "smooth"
     });
   }
-}); // // random color rgb
-// const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
-// const randomColor = () => `rgb(${randomInt(0, 255)}, ${randomInt(0, 255)}, ${randomInt(0, 255)})`;
-// console.log(randomColor(0, 255));
-// document.querySelector(".nav-link").addEventListener("click", function (e) {
-//   this.style.backgroundColor = randomColor();
-//   console.log("Link", e.target);
-//   e.stopPropagation();
-// });
-// document.querySelector(".nav-links").addEventListener("click", function (e) {
-//   this.style.backgroundColor = randomColor();
-//   console.log("Link", e.target);
-// });
-// reveal sections with IntersectionObserver
+}); // reveal sections with IntersectionObserver
 
 var allSections = document.querySelectorAll("section");
 
@@ -265,7 +244,19 @@ var tabsContainer = document.querySelector(".about-content-container");
 var tabsContent = document.querySelectorAll(".about-content");
 tabsContainer.addEventListener("click", function (e) {
   var clicked = e.target.closest(".about-tab");
-  console.log(clicked);
+  console.log(clicked); // guard clause
+
+  if (!clicked) return; //active tab
+
+  tabs.forEach(function (t) {
+    return t.classList.remove("about-tab-active");
+  });
+  tabsContent.forEach(function (c) {
+    return c.classList.remove("about-content-active");
+  });
+  clicked.classList.add("about-tab-active"); // activate content area
+
+  document.querySelector(".about-content-".concat(clicked.dataset.tab)).classList.add("about-content-active");
 }); // menu fade animation
 
 var handleHover = function handleHover(e, opacity) {

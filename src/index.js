@@ -70,26 +70,14 @@ const sectionAppt = document.querySelector("#appointment");
 
 btnScrollTo.addEventListener("click", function (e) {
   const sectionApptCoords = sectionAppt.getBoundingClientRect();
-  // console.log coords
-  // console.log(sectionApptCoords);
-  // console.log(e.target.getBoundingClientRect());
-  window.scrollTo({
-    left: sectionApptCoords.left + window.pageXOffset,
-    top: sectionApptCoords.top + window.pageYOffset,
-    behavior: "smooth",
-  });
-  // newest method used
-  // sectionAppt.scrollIntoView({ behavior: "smooth" });
+  sectionAppt.scrollIntoView({ behavior: "smooth" });
 });
-
-//1. Add event listener to common parent element
-//2. Determine what element originated the event
 
 // smooth scrolling to the section
 document.querySelector(".nav-links").addEventListener("click", function (e) {
   e.preventDefault();
 
-  // Matching strategy
+  // Matching
   if (e.target.classList.contains("nav-link")) {
     const id = e.target.getAttribute("href");
     console.log(e.target);
@@ -97,23 +85,6 @@ document.querySelector(".nav-links").addEventListener("click", function (e) {
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
   }
 });
-
-// // random color rgb
-// const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
-// const randomColor = () => `rgb(${randomInt(0, 255)}, ${randomInt(0, 255)}, ${randomInt(0, 255)})`;
-// console.log(randomColor(0, 255));
-
-// document.querySelector(".nav-link").addEventListener("click", function (e) {
-//   this.style.backgroundColor = randomColor();
-//   console.log("Link", e.target);
-
-//   e.stopPropagation();
-// });
-
-// document.querySelector(".nav-links").addEventListener("click", function (e) {
-//   this.style.backgroundColor = randomColor();
-//   console.log("Link", e.target);
-// });
 
 // reveal sections with IntersectionObserver
 const allSections = document.querySelectorAll("section");
@@ -140,6 +111,17 @@ const tabsContent = document.querySelectorAll(".about-content");
 tabsContainer.addEventListener("click", function (e) {
   const clicked = e.target.closest(".about-tab");
   console.log(clicked);
+
+  // guard clause
+  if (!clicked) return;
+
+  //active tab
+  tabs.forEach((t) => t.classList.remove("about-tab-active"));
+  tabsContent.forEach((c) => c.classList.remove("about-content-active"));
+  clicked.classList.add("about-tab-active");
+
+  // activate content area
+  document.querySelector(`.about-content-${clicked.dataset.tab}`).classList.add("about-content-active");
 });
 
 // menu fade animation
