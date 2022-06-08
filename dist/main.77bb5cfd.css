@@ -104,18 +104,24 @@ nav {
   align-items: center;
   justify-content: space-between;
   color: #5a5a5a;
+  transition: all 0s ease-in-out;
 }
 nav .logo {
   font-size: 1.125rem;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+nav li {
+  transition: all 0.4s ease-in-out;
 }
 nav a {
   text-decoration: none;
   color: #5a5a5a;
   transition: all 0.4s ease-in-out;
 }
-nav a:hover {
+nav ul a:hover {
   color: #8d00bf;
-  font-weight: 600;
+  font-weight: 500;
 }
 nav ul {
   display: flex;
@@ -441,7 +447,7 @@ nav,
   animation: fadeDown 1s ease-in-out;
 }
 #home .second-column img {
-  animation: opacity 3s ease-in-out;
+  animation: opacity 2.5s ease-in-out;
 }
 
 @media (max-width: 768px) {

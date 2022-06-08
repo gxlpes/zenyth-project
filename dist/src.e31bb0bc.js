@@ -260,18 +260,24 @@ allSections.forEach(function (section) {
 });
 var navigationHeight = document.querySelector("nav"); // menu fade animation
 
-nav.addEventListener("mouseover", function (e) {
+var handleHover = function handleHover(e, opacity) {
   if (e.target.classList.contains("nav-link")) {
     var link = e.target;
     var siblings = link.closest("nav").querySelectorAll(".nav-link");
     var logo = link.closest("nav").querySelector(".logo");
     siblings.forEach(function (el) {
-      if (el !== link) el.style.opacity = 0.5;
+      if (el !== link) el.style.opacity = opacity;
     });
-    logo.style.opacity = 0.5;
+    logo.style.opacity = opacity;
   }
+};
+
+nav.addEventListener("mouseover", function (e) {
+  handleHover(e, 0.5);
 });
-nav.addEventListener("mouseout", function (e) {});
+nav.addEventListener("mouseout", function (e) {
+  handleHover(e, 1);
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

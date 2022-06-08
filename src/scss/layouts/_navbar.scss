@@ -5,9 +5,16 @@ nav {
   align-items: center;
   justify-content: space-between;
   color: i.$clr-text;
+  transition: all 0s ease-in-out;
 
   .logo {
     font-size: i.$font-size-logo;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+  }
+
+  li {
+    transition: all 0.4s ease-in-out;
   }
 
   a {
@@ -16,9 +23,9 @@ nav {
     transition: all 0.4s ease-in-out;
   }
 
-  a:hover {
+  ul a:hover {
     color: i.$clr-purple1;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   ul {
