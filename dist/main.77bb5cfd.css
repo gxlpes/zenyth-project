@@ -106,6 +106,10 @@ nav {
   color: #5a5a5a;
   transition: all 0s ease-in-out;
 }
+nav .sticky {
+  position: fixed;
+  background-color: purple;
+}
 nav .logo {
   font-size: 1.125rem;
   transition: all 0.4s ease-in-out;

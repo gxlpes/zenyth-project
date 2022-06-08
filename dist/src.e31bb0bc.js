@@ -153,6 +153,11 @@ var navSlide = function navSlide() {
 };
 
 navSlide(); //////////////////////////////////////////////////////////////////////////////////
+// sticky navigation
+
+var sectionAbout = document.querySelector("#about");
+var initialCoords = sectionAbout.getBoundingClientRect();
+if (window.scrollY > initialCoords.top) nav.classList.add("sticky");else nav.classList.add("sticky"); //////////////////////////////////////////////////////////////////////////////////
 // cookies message
 
 var nav = document.querySelector("nav");
@@ -310,7 +315,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51596" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63795" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
