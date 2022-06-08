@@ -385,9 +385,10 @@ nav button.contact {
   cursor: pointer;
 }
 
-.about {
+#about {
   max-width: 100rem;
   margin: 12rem auto 0 auto;
+  transition: all 1s ease-in-out;
   background-color: #fff;
 }
 
@@ -510,6 +511,7 @@ nav button.contact {
 
 body {
   box-sizing: border-box;
+  transition: all 0.4s ease-in-out;
 }
 
 body {

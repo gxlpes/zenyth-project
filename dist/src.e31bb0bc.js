@@ -153,12 +153,22 @@ var navSlide = function navSlide() {
 };
 
 navSlide(); //////////////////////////////////////////////////////////////////////////////////
-// sticky navigation
+// sticky navigation Intersection Observer
 
-var navContainer = document.querySelector("nav");
 var sectionAbout = document.querySelector("#about");
-var initialCoords = sectionAbout.getBoundingClientRect();
-if (window.scrollY > initialCoords.top) navContainer.classList.add("sticky");else navContainer.classList.remove("sticky"); //////////////////////////////////////////////////////////////////////////////////
+
+var obsCallback = function obsCallback(entries, observer) {
+  entries.forEach(function (entry) {
+    console.log(entry);
+  });
+};
+
+var obsOptions = {
+  root: null,
+  threshold: 0.1
+};
+var observer = new IntersectionObserver(obsCallback, obsOptions);
+observer.observe(sectionAbout); //////////////////////////////////////////////////////////////////////////////////
 // cookies message
 
 var nav = document.querySelector("nav");
@@ -193,8 +203,6 @@ btnsOpenModal.forEach(function (btn) {
 btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 document.addEventListener("keydown", function (e) {
-  console.log(e.key);
-
   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
     closeModal();
   }
@@ -229,7 +237,6 @@ var revealSection = function revealSection(entries, observer) {
   var _entries = _slicedToArray(entries, 1),
       entry = _entries[0];
 
-  console.log(entry);
   if (!entry.isIntersecting) return;
   entry.target.classList.remove("section-hidden");
   observer.unobserve(entry.target);
@@ -316,7 +323,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63795" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65292" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

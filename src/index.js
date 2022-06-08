@@ -25,12 +25,17 @@ const navSlide = () => {
 navSlide();
 
 //////////////////////////////////////////////////////////////////////////////////
-// sticky navigation
-const navContainer = document.querySelector("nav");
+// sticky navigation Intersection Observer
 const sectionAbout = document.querySelector("#about");
-const initialCoords = sectionAbout.getBoundingClientRect();
-if (window.scrollY > initialCoords.top) navContainer.classList.add("sticky");
-else navContainer.classList.remove("sticky");
+const obsCallback = function (entries, observer) {
+  entries.forEach((entry) => {
+    console.log(entry);
+  });
+};
+const obsOptions = { root: null, threshold: 0.1 };
+
+const observer = new IntersectionObserver(obsCallback, obsOptions);
+observer.observe(sectionAbout);
 
 //////////////////////////////////////////////////////////////////////////////////
 // cookies message
@@ -65,7 +70,6 @@ btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 
 document.addEventListener("keydown", (e) => {
-  console.log(e.key);
   if (e.key === "Escape" && !modal.classList.contains("hidden")) {
     closeModal();
   }
@@ -98,7 +102,6 @@ document.querySelector(".nav-links").addEventListener("click", function (e) {
 const allSections = document.querySelectorAll("section");
 const revealSection = function (entries, observer) {
   const [entry] = entries;
-  console.log(entry);
   if (!entry.isIntersecting) return;
   entry.target.classList.remove("section-hidden");
   observer.unobserve(entry.target);
