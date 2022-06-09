@@ -203,8 +203,7 @@ btnScrollTo.addEventListener("click", function (e) {
 }); // smooth scrolling to the section
 
 document.querySelector(".nav-links").addEventListener("click", function (e) {
-  e.preventDefault(); //////////////////////////////////////////////////////////////////////////////////
-  // Matching
+  e.preventDefault();
 
   if (e.target.classList.contains("nav-link")) {
     var id = e.target.getAttribute("href");
@@ -307,7 +306,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64946" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50413" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
