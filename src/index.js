@@ -26,7 +26,7 @@ navSlide();
 
 //////////////////////////////////////////////////////////////////////////////////
 // cookies message
-
+const nav = document.querySelector("nav");
 const message = document.createElement("div");
 message.classList.add("cookie-message");
 message.innerHTML = 'We use cookies for analytics and perfomance of our website. <button class="cookie-close">Close</button>';
