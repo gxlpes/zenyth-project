@@ -104,11 +104,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   color: #5a5a5a;
-  transition: all 0s ease-in-out;
-}
-nav .sticky {
-  position: fixed;
-  background-color: purple;
+  transition: all 0.4s ease-in-out;
 }
 nav .logo {
   font-size: 1.125rem;
@@ -137,6 +133,11 @@ nav ul {
 }
 nav button.contact {
   background-color: #8d00bf;
+}
+
+.sticky {
+  position: fixed;
+  background-color: purple;
 }
 
 .burguer {
@@ -557,11 +558,6 @@ body {
     opacity: 1;
   }
 }
-nav,
-.cookie-message {
-  animation: fadeUp 1s ease-in-out;
-}
-
 #home .first-column {
   animation: fadeDown 1s ease-in-out;
 }

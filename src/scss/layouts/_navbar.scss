@@ -5,12 +5,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   color: i.$clr-text;
-  transition: all 0s ease-in-out;
-
-  .sticky {
-    position: fixed;
-    background-color: purple;
-  }
+  transition: all 0.4s ease-in-out;
 
   .logo {
     font-size: i.$font-size-logo;
@@ -45,6 +40,11 @@ nav {
   button.contact {
     background-color: i.$clr-purple1;
   }
+}
+
+.sticky {
+  position: fixed;
+  background-color: purple;
 }
 
 .burguer {

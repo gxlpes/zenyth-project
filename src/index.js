@@ -25,21 +25,8 @@ const navSlide = () => {
 navSlide();
 
 //////////////////////////////////////////////////////////////////////////////////
-// sticky navigation Intersection Observer
-const sectionAbout = document.querySelector("#about");
-const obsCallback = function (entries, observer) {
-  entries.forEach((entry) => {
-    console.log(entry);
-  });
-};
-const obsOptions = { root: null, threshold: 0.1 };
-
-const observer = new IntersectionObserver(obsCallback, obsOptions);
-observer.observe(sectionAbout);
-
-//////////////////////////////////////////////////////////////////////////////////
 // cookies message
-const nav = document.querySelector("nav");
+
 const message = document.createElement("div");
 message.classList.add("cookie-message");
 message.innerHTML = 'We use cookies for analytics and perfomance of our website. <button class="cookie-close">Close</button>';

@@ -153,25 +153,8 @@ var navSlide = function navSlide() {
 };
 
 navSlide(); //////////////////////////////////////////////////////////////////////////////////
-// sticky navigation Intersection Observer
-
-var sectionAbout = document.querySelector("#about");
-
-var obsCallback = function obsCallback(entries, observer) {
-  entries.forEach(function (entry) {
-    console.log(entry);
-  });
-};
-
-var obsOptions = {
-  root: null,
-  threshold: 0.1
-};
-var observer = new IntersectionObserver(obsCallback, obsOptions);
-observer.observe(sectionAbout); //////////////////////////////////////////////////////////////////////////////////
 // cookies message
 
-var nav = document.querySelector("nav");
 var message = document.createElement("div");
 message.classList.add("cookie-message");
 message.innerHTML = 'We use cookies for analytics and perfomance of our website. <button class="cookie-close">Close</button>';
