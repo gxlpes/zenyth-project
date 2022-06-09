@@ -75,9 +75,6 @@ btnScrollTo.addEventListener("click", function (e) {
 // smooth scrolling to the section
 document.querySelector(".nav-links").addEventListener("click", function (e) {
   e.preventDefault();
-
-  //////////////////////////////////////////////////////////////////////////////////
-  // Matching
   if (e.target.classList.contains("nav-link")) {
     const id = e.target.getAttribute("href");
     document.querySelector(id).scrollIntoView({ behavior: "smooth" });
@@ -93,6 +90,7 @@ const revealSection = function (entries, observer) {
   entry.target.classList.remove("section-hidden");
   observer.unobserve(entry.target);
 };
+
 const sectionObserver = new IntersectionObserver(revealSection, { root: null, threshold: 0.15 });
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
