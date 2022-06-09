@@ -41,11 +41,6 @@
   transition: all 0.5s ease-in-out;
 }
 
-.hidden {
-  display: none;
-  animation: close-modal 0.5s ease-in-out;
-}
-
 .modal {
   position: absolute;
   top: 50%;
@@ -59,6 +54,10 @@
   box-shadow: 0 3rem 5rem black;
   z-index: 10;
   animation: open-modal 0.5s ease-in-out;
+}
+
+.hidden {
+  display: none;
 }
 
 .overlay {
@@ -545,6 +544,14 @@ body {
     opacity: 0;
   }
   100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity1 {
+  100% {
+    opacity: 0;
+  }
+  0% {
     opacity: 1;
   }
 }

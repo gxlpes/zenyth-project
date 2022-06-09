@@ -57,6 +57,16 @@ body {
   }
 }
 
+@keyframes opacity1 {
+  100% {
+    opacity: 0;
+  }
+
+  0% {
+    opacity: 1;
+  }
+}
+
 @keyframes fadeUp {
   0% {
     transform: translateY(-100%);
