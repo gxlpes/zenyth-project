@@ -132,6 +132,9 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+var navigationHeight = document.querySelector("nav");
+var nav = document.querySelector("nav");
+
 var navSlide = function navSlide() {
   var burguer = document.querySelector(".burguer");
   var nav = document.querySelector(".nav-links");
@@ -155,13 +158,15 @@ var navSlide = function navSlide() {
 navSlide(); //////////////////////////////////////////////////////////////////////////////////
 // cookies message
 
-var nav = document.querySelector("nav");
 var message = document.createElement("div");
 message.classList.add("cookie-message");
-message.innerHTML = 'We use cookies for analytics and perfomance of our website. <button class="cookie-close">Close</button>';
+message.innerHTML = 'We use cookies for analytics our website. <button class="cookie-close">Close</button>';
 nav.before(message);
 document.querySelector(".cookie-close").addEventListener("click", function () {
-  return message.remove();
+  message.classList.add("removed");
+  document.querySelector(".cookie-close").addEventListener("transitionend", function () {
+    return message.remove();
+  });
 }); //////////////////////////////////////////////////////////////////////////////////
 // modal window setup
 
@@ -200,7 +205,8 @@ btnScrollTo.addEventListener("click", function (e) {
   sectionAppt.scrollIntoView({
     behavior: "smooth"
   });
-}); // smooth scrolling to the section
+}); //////////////////////////////////////////////////////////////////////////////////
+// smooth scrolling to the section
 
 document.querySelector(".nav-links").addEventListener("click", function (e) {
   e.preventDefault();
@@ -220,7 +226,8 @@ var revealSection = function revealSection(entries, observer) {
   var _entries = _slicedToArray(entries, 1),
       entry = _entries[0];
 
-  if (!entry.isIntersecting) return;
+  if (!entry.isIntersecting) return; // else
+
   entry.target.classList.remove("section-hidden");
   observer.unobserve(entry.target);
 };
@@ -232,8 +239,7 @@ var sectionObserver = new IntersectionObserver(revealSection, {
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add("section-hidden");
-});
-var navigationHeight = document.querySelector("nav"); //////////////////////////////////////////////////////////////////////////////////
+}); //////////////////////////////////////////////////////////////////////////////////
 // tabbed component
 
 var tabs = document.querySelectorAll(".about-tab");
@@ -306,7 +312,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50413" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62018" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

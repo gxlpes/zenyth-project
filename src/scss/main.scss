@@ -28,6 +28,7 @@ body {
   font-family: i.$font-family;
   color: i.$clr-text;
   max-width: 85rem;
+  transition: all 0.4s ease-in-out;
 }
 
 .section-hidden {
@@ -79,10 +80,10 @@ body {
   }
 }
 
-// nav,
-// .cookie-message {
-//   animation: fadeUp 1s ease-in-out;
-// }
+nav,
+.cookie-message {
+  animation: fadeUp 1s ease-in-out;
+}
 
 #home {
   .first-column {
@@ -92,11 +93,6 @@ body {
     animation: opacity 2.5s ease-in-out;
   }
 }
-// @media (min-width: 1400px) {
-//   body {
-//     max-width: 1000px;
-//   }
-// }
 
 @media (max-width: 768px) {
   body {

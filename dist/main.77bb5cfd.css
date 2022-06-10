@@ -21,7 +21,7 @@
 .contact:hover,
 .schedule:hover,
 .cookie-close:hover {
-  opacity: 0.8;
+  opacity: 0.5;
   cursor: pointer;
 }
 
@@ -148,7 +148,7 @@ nav button.contact {
   height: 3px;
   background: #5a5a5a;
   margin: 5px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .cookie-message {
@@ -157,14 +157,18 @@ nav button.contact {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: 0.2rem;
   margin-inline: auto;
   margin-top: 0.4rem;
-  padding: 0.3rem 3rem;
-  max-width: 60rem;
+  padding: 0.3rem 1rem;
+  max-width: 25rem;
   border-radius: 7px;
   font-size: 0.7rem;
   font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+
+.removed {
+  opacity: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -194,16 +198,6 @@ nav button.contact {
 
   nav li {
     opacity: 0;
-  }
-
-  .cookie-message {
-    width: 100%;
-    font-size: 0.8rem;
-    padding: 0.5rem;
-  }
-  .cookie-message .cookie-close {
-    width: 4rem;
-    font-size: 0.6rem;
   }
 
   .nav-active {
@@ -284,8 +278,8 @@ nav button.contact {
   }
 }
 #dentists {
-  scroll-margin-top: 6rem;
-  margin-top: 5rem;
+  scroll-margin-top: 5rem;
+  margin-top: 4rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -294,7 +288,7 @@ nav button.contact {
 }
 
 .text-box {
-  margin-block: 2rem;
+  margin-top: 2rem;
   margin-inline-end: auto;
   display: flex;
   flex-direction: column;
@@ -386,10 +380,14 @@ nav button.contact {
 }
 
 #about {
-  max-width: 100rem;
-  margin: 12rem auto 0 auto;
   transition: all 1s ease-in-out;
-  background-color: #fff;
+}
+
+.about {
+  margin-top: 3rem;
+  transition: all 1s ease-in-out;
+  background-color: #939393;
+  border-radius: 10px;
 }
 
 .about-tab-container {
@@ -398,38 +396,34 @@ nav button.contact {
 }
 
 .about-tab {
-  margin-right: 2.5rem;
+  font-size: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  color: white;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border-style: none;
+  margin-right: 1rem;
   transform: translateY(-50%);
 }
-
 .about-tab span {
   margin-right: 1rem;
   font-weight: 600;
   display: inline-block;
 }
 
-.about-tab-1 {
-  background-color: yellowgreen;
-}
-
-.about-tab-1:hover {
-  background-color: yellow;
-}
-
-.about-tab-2 {
-  background-color: yellowgreen;
-}
-
-.about-tab-2:hover {
-  background-color: yellow;
-}
-
+.about-tab-1,
+.about-tab-2,
 .about-tab-3 {
-  background-color: yellowgreen;
-  margin: 0;
+  background-color: #8d00bf;
 }
-
-.about-tab-3:hover {
+.about-tab-1 .about-tab-1:hover,
+.about-tab-1 .about-tab-2:hover,
+.about-tab-1 .about-tab-3:hover,
+.about-tab-2 .about-tab-1:hover,
+.about-tab-2 .about-tab-2:hover,
+.about-tab-2 .about-tab-3:hover,
+.about-tab-3 .about-tab-1:hover,
+.about-tab-3 .about-tab-2:hover,
+.about-tab-3 .about-tab-3:hover {
   background-color: yellow;
 }
 
@@ -439,16 +433,17 @@ nav button.contact {
 
 .about-content {
   display: none;
-  /* JUST PRESENTATIONAL */
   font-size: 1.7rem;
-  padding: 2.5rem 7rem 6.5rem 7rem;
+  padding-inline: 2rem;
+  font-size: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
 }
 
 .about-content-active {
   display: grid;
-  grid-template-columns: 7rem 1fr;
+  align-items: center;
+  grid-template-columns: 6rem 1fr;
   column-gap: 3rem;
-  row-gap: 0.5rem;
+  row-gap: 0.01rem;
 }
 
 .about-header {
@@ -522,6 +517,7 @@ body {
   font-family: "Merriweather", serif;
   color: #5a5a5a;
   max-width: 85rem;
+  transition: all 0.4s ease-in-out;
 }
 
 .section-hidden {
@@ -565,6 +561,11 @@ body {
     opacity: 1;
   }
 }
+nav,
+.cookie-message {
+  animation: fadeUp 1s ease-in-out;
+}
+
 #home .first-column {
   animation: fadeDown 1s ease-in-out;
 }

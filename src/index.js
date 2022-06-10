@@ -1,4 +1,6 @@
 "use strict";
+const navigationHeight = document.querySelector("nav");
+const nav = document.querySelector("nav");
 
 const navSlide = () => {
   const burguer = document.querySelector(".burguer");
@@ -26,13 +28,15 @@ navSlide();
 
 //////////////////////////////////////////////////////////////////////////////////
 // cookies message
-const nav = document.querySelector("nav");
 const message = document.createElement("div");
 message.classList.add("cookie-message");
-message.innerHTML = 'We use cookies for analytics and perfomance of our website. <button class="cookie-close">Close</button>';
+message.innerHTML = 'We use cookies for analytics our website. <button class="cookie-close">Close</button>';
 nav.before(message);
 
-document.querySelector(".cookie-close").addEventListener("click", () => message.remove());
+document.querySelector(".cookie-close").addEventListener("click", () => {
+  message.classList.add("removed");
+  document.querySelector(".cookie-close").addEventListener("transitionend", () => message.remove());
+});
 
 //////////////////////////////////////////////////////////////////////////////////
 // modal window setup
@@ -72,6 +76,7 @@ btnScrollTo.addEventListener("click", function (e) {
   sectionAppt.scrollIntoView({ behavior: "smooth" });
 });
 
+//////////////////////////////////////////////////////////////////////////////////
 // smooth scrolling to the section
 document.querySelector(".nav-links").addEventListener("click", function (e) {
   e.preventDefault();
@@ -87,17 +92,15 @@ const allSections = document.querySelectorAll("section");
 const revealSection = function (entries, observer) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
+  // else
   entry.target.classList.remove("section-hidden");
   observer.unobserve(entry.target);
 };
-
 const sectionObserver = new IntersectionObserver(revealSection, { root: null, threshold: 0.15 });
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add("section-hidden");
 });
-
-const navigationHeight = document.querySelector("nav");
 
 //////////////////////////////////////////////////////////////////////////////////
 // tabbed component

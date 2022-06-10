@@ -1,8 +1,8 @@
 @use "../index" as i;
 
 #dentists {
-  scroll-margin-top: 6rem;
-  margin-top: 5rem;
+  scroll-margin-top: 5rem;
+  margin-top: 4rem;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -11,7 +11,7 @@
 }
 
 .text-box {
-  margin-block: 2rem;
+  margin-top: 2rem;
   margin-inline-end: auto;
   display: flex;
   flex-direction: column;

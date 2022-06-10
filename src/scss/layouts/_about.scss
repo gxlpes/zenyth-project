@@ -1,8 +1,14 @@
+@use "../index" as i;
+
 #about {
-  max-width: 100rem;
-  margin: 12rem auto 0 auto;
   transition: all 1s ease-in-out;
-  background-color: #fff;
+}
+
+.about {
+  margin-top: 3rem;
+  transition: all 1s ease-in-out;
+  background-color: #939393;
+  border-radius: 10px;
 }
 
 .about-tab-container {
@@ -11,39 +17,30 @@
 }
 
 .about-tab {
-  margin-right: 2.5rem;
-  transform: translateY(-50%);
-}
-
-.about-tab span {
+  font-size: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  color: white;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border-style: none;
   margin-right: 1rem;
-  font-weight: 600;
-  display: inline-block;
+  transform: translateY(-50%);
+  span {
+    margin-right: 1rem;
+    font-weight: 600;
+    display: inline-block;
+  }
 }
 
-.about-tab-1 {
-  background-color: yellowgreen;
-}
-
-.about-tab-1:hover {
-  background-color: yellow;
-}
-
-.about-tab-2 {
-  background-color: yellowgreen;
-}
-
-.about-tab-2:hover {
-  background-color: yellow;
-}
-
+.about-tab-1,
+.about-tab-2,
 .about-tab-3 {
-  background-color: yellowgreen;
-  margin: 0;
-}
+  background-color: i.$clr-purple1;
 
-.about-tab-3:hover {
-  background-color: yellow;
+  .about-tab-1:hover,
+  .about-tab-2:hover,
+  .about-tab-3:hover {
+    background-color: yellow;
+  }
 }
 
 .about-tab-active {
@@ -52,17 +49,17 @@
 
 .about-content {
   display: none;
-
-  /* JUST PRESENTATIONAL */
   font-size: 1.7rem;
-  padding: 2.5rem 7rem 6.5rem 7rem;
+  padding-inline: 2rem;
+  font-size: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
 }
 
 .about-content-active {
   display: grid;
-  grid-template-columns: 7rem 1fr;
+  align-items: center;
+  grid-template-columns: 6rem 1fr;
   column-gap: 3rem;
-  row-gap: 0.5rem;
+  row-gap: 0.01rem;
 }
 
 .about-header {
