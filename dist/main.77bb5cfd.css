@@ -401,7 +401,7 @@ nav button.contact {
   padding: 0.6rem;
   border-radius: 5px;
   border-style: none;
-  margin-right: 1rem;
+  margin-inline: 1rem;
   transform: translateY(-50%);
 }
 .about-tab span {
@@ -492,6 +492,10 @@ nav button.contact {
 
 .about-icon-3 svg {
   fill: black;
+}
+
+footer {
+  background-color: grey;
 }
 
 *,
