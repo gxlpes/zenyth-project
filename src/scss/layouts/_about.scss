@@ -7,7 +7,7 @@
 .about {
   margin-top: 3rem;
   transition: all 1s ease-in-out;
-  background-color: #939393;
+  background-color: rgba(69, 69, 69, 0.529);
   border-radius: 10px;
 }
 
@@ -19,16 +19,23 @@
 .about-tab {
   font-size: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
   color: white;
-  padding: 0.6rem;
+  padding: 0.6rem 1rem;
   border-radius: 5px;
   border-style: none;
-  margin-inline: 1rem;
+  margin-left: 0.5rem;
   transform: translateY(-50%);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
   span {
     margin-right: 1rem;
     font-weight: 600;
     display: inline-block;
   }
+}
+
+.about-tab:hover {
+  box-shadow: 7px 5px 4px rgba(0, 0, 0, 0.249);
+  opacity: 0.5;
 }
 
 .about-tab-1,
@@ -47,6 +54,14 @@
   transform: translateY(-66%);
 }
 
+.text-about-content {
+  display: flex;
+  flex-direction: column;
+  h5 {
+    margin: 0;
+  }
+}
+
 .about-content {
   display: none;
   font-size: 1.7rem;
@@ -55,17 +70,17 @@
 }
 
 .about-content-active {
-  display: grid;
+  display: flex;
   align-items: center;
   grid-template-columns: 6rem 1fr;
   column-gap: 3rem;
   row-gap: 0.01rem;
+  padding: 2rem;
 }
 
 .about-header {
   font-size: 2.25rem;
   font-weight: 500;
-  align-self: center;
 }
 
 .about-icon {
@@ -78,12 +93,8 @@
 }
 
 .about-icon svg {
-  height: 2.75rem;
-  width: 2.75rem;
-}
-
-.about-content p {
-  grid-column: 2;
+  height: clamp(1rem, 3rem + 50vw, 3rem);
+  width: auto;
 }
 
 .about-icon-1 {
