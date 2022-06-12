@@ -60,6 +60,10 @@
   h5 {
     margin: 0;
   }
+  p {
+    margin: 0;
+    margin-top: 1.2rem;
+  }
 }
 
 .about-content {
@@ -72,9 +76,8 @@
 .about-content-active {
   display: flex;
   align-items: center;
-  grid-template-columns: 6rem 1fr;
-  column-gap: 3rem;
-  row-gap: 0.01rem;
+  gap: 3rem;
+  margin-top: -1rem;
   padding: 2rem;
 }
 
@@ -97,21 +100,8 @@
   width: auto;
 }
 
-.about-icon-1 {
-  background-color: purple;
-}
-.about-icon-2 {
-  background-color: purple;
-}
+.about-icon-1,
+.about-icon-2,
 .about-icon-3 {
-  background-color: purple;
-}
-.about-icon-1 svg {
-  fill: black;
-}
-.about-icon-2 svg {
-  fill: black;
-}
-.about-icon-3 svg {
-  fill: black;
+  background-color: i.$clr-purple1;
 }
