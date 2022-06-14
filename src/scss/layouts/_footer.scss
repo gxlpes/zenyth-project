@@ -1,5 +1,9 @@
 @use "../index" as i;
 
 footer {
-  background-color: grey;
+  background-color: i.$clr-purple1;
+  margin-top: 10rem;
+  color: white;
+  color: i.$clr-text;
+  width: 100%;
 }

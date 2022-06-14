@@ -110,6 +110,7 @@ button {
 }
 nav {
   display: flex;
+  margin: auto;
   align-items: center;
   justify-content: space-between;
   color: #5a5a5a;
@@ -554,7 +555,11 @@ form textarea:focus {
 }
 
 footer {
-  background-color: grey;
+  background-color: #8d00bf;
+  margin-top: 10rem;
+  color: white;
+  color: #5a5a5a;
+  width: 100%;
 }
 
 *,
@@ -568,19 +573,34 @@ footer {
 }
 
 body {
-  box-sizing: border-box;
-  transition: all 0.4s ease-in-out;
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  box-sizing: border-box;
+  transition: all 0.4s ease-in-out;
   display: flex;
   flex-direction: column;
-  padding-inline: 2rem;
   margin: auto;
   font-family: "Merriweather", serif;
   color: #5a5a5a;
-  max-width: 85rem;
   transition: all 0.4s ease-in-out;
+}
+
+nav {
+  max-width: 85rem;
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+content {
+  max-width: 85rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-inline: 2rem;
 }
 
 .section-hidden {

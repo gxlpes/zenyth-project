@@ -18,19 +18,34 @@
 }
 
 body {
-  box-sizing: border-box;
-  transition: all 0.4s ease-in-out;
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  box-sizing: border-box;
+  transition: all 0.4s ease-in-out;
   display: flex;
   flex-direction: column;
-  padding-inline: 2rem;
   margin: auto;
   font-family: i.$font-family;
   color: i.$clr-text;
-  max-width: 85rem;
   transition: all 0.4s ease-in-out;
+}
+
+nav {
+  max-width: 85rem;
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+content {
+  max-width: 85rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-inline: 2rem;
 }
 
 .section-hidden {
