@@ -1,14 +1,18 @@
 @use "../index" as i;
 
 #about {
+  scroll-margin-top: 5rem;
   transition: all 1s ease-in-out;
 }
 
 .about {
-  margin-top: 3rem;
+  margin-top: 4rem;
   transition: all 1s ease-in-out;
-  background-color: rgba(69, 69, 69, 0.529);
+  background-color: white;
+  border: 2px solid;
+  border-color: rgb(170, 170, 170);
   border-radius: 10px;
+  box-shadow: i.$box-shadow-default;
 }
 
 .about-tab-container {
