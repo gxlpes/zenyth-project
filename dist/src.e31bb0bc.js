@@ -160,7 +160,7 @@ navSlide(); ////////////////////////////////////////////////////////////////////
 
 var message = document.createElement("div");
 message.classList.add("cookie-message");
-message.innerHTML = 'We use cookies for analytics our website. <button class="cookie-close">Close</button>';
+message.innerHTML = 'We use cookies for analytics and perfomance of our website. <button class="cookie-close">Close</button>';
 nav.before(message);
 document.querySelector(".cookie-close").addEventListener("click", function () {
   message.classList.add("removed");
@@ -312,7 +312,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50941" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50124" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

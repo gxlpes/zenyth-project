@@ -41,7 +41,24 @@
     width: clamp(200px, 60vw, 400px);
     border-radius: 12px;
     box-shadow: 15px 15px i.$clr-purple1;
+    transition: all 1s ease-in-out;
   }
+  .slides {
+    display: flex;
+  }
+  .slides input {
+    display: none;
+  }
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+#radio3:checked ~ .first {
+  margin-left: -40%;
 }
 
 @media screen and (max-width: 768px) {

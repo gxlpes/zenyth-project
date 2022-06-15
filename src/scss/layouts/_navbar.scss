@@ -62,16 +62,14 @@ nav {
 
 // cookies message
 .cookie-message {
-  background-color: rgba(69, 69, 69, 0.529);
-  color: white;
+  max-width: 85rem;
+  color: i.$clr-text;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-inline: auto;
   margin-top: 0.4rem;
   padding: 0.3rem 1rem;
-  max-width: 25rem;
-  border-radius: 7px;
   font-size: 0.7rem;
   font-weight: 400;
   transition: all 0.3s ease-in-out;

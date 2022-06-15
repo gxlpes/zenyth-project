@@ -167,16 +167,14 @@ nav button.contact {
 }
 
 .cookie-message {
-  background-color: rgba(69, 69, 69, 0.529);
-  color: white;
+  max-width: 85rem;
+  color: #5a5a5a;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-inline: auto;
   margin-top: 0.4rem;
   padding: 0.3rem 1rem;
-  max-width: 25rem;
-  border-radius: 7px;
   font-size: 0.7rem;
   font-weight: 400;
   transition: all 0.3s ease-in-out;
@@ -278,6 +276,25 @@ nav button.contact {
   width: clamp(200px, 60vw, 400px);
   border-radius: 12px;
   box-shadow: 15px 15px #8d00bf;
+  transition: all 1s ease-in-out;
+}
+.second-column .slides {
+  display: flex;
+}
+.second-column .slides input {
+  display: none;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
 }
 
 @media screen and (max-width: 768px) {

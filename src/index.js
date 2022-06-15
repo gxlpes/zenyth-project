@@ -30,7 +30,7 @@ navSlide();
 // cookies message
 const message = document.createElement("div");
 message.classList.add("cookie-message");
-message.innerHTML = 'We use cookies for analytics our website. <button class="cookie-close">Close</button>';
+message.innerHTML = 'We use cookies for analytics and perfomance of our website. <button class="cookie-close">Close</button>';
 nav.before(message);
 
 document.querySelector(".cookie-close").addEventListener("click", () => {
