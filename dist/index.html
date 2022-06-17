@@ -207,21 +207,21 @@
         <form id="survey-form">
           <div class="form-group">
             <label id="first-label" for="first-name">Name:</label>
-            <input type="text" name="name" id="name" maxlength="25" class="form-control" required="">
+            <input type="text" name="name" id="name" maxlength="25" class="form-control" placeholder="John Smith" required="">
           </div>
 
           <div class="form-group">
             <label id="email-label" for="email">E-mail:</label>
-            <input type="email" name="email" id="email" class="form-control" required="">
+            <input type="email" name="email" id="email" class="form-control" placeholder="john@gmail.com" required="">
           </div>
 
           <div class="form-group">
             <label id="number-label" for="number">Birthdate:</label>
-            <input type="date" name="date" id="number" min="10" max="99" class="form-control" placeholder=" ">
+            <input type="text" name="date" id="number" min="10" max="99" class="form-control" placeholder="mm/dd/aaaa" onfocus="(this.type='date')">
           </div>
           <div class="form-group">
             <p>What is your dental problem?</p>
-            <textarea id="comments" class="input-textarea" name="comment"></textarea>
+            <textarea id="comments" class="input-textarea" name="comment" placeholder="I want a beautiful smiling face."></textarea>
           </div>
           <div class="form-group">
             <button type="submit">Submit</button>
