@@ -96,7 +96,7 @@ const revealSection = function (entries, observer) {
   entry.target.classList.remove("section-hidden");
   observer.unobserve(entry.target);
 };
-const sectionObserver = new IntersectionObserver(revealSection, { root: null, threshold: 0.1 });
+const sectionObserver = new IntersectionObserver(revealSection, { root: null, threshold: 0.9 });
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add("section-hidden");

@@ -234,7 +234,7 @@ var revealSection = function revealSection(entries, observer) {
 
 var sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.6
+  threshold: 0.9
 });
 allSections.forEach(function (section) {
   sectionObserver.observe(section);
@@ -312,7 +312,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64253" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64582" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
