@@ -244,8 +244,8 @@ nav button.contact {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 2rem;
-  scroll-margin-top: 20rem;
+  margin-top: -9rem;
+  height: 100vh;
 }
 
 .first-column {
@@ -424,7 +424,7 @@ nav button.contact {
 }
 
 .about {
-  max-width: 100%;
+  width: max-content;
   margin-top: 4rem;
   transition: all 1s ease-in-out;
   background-color: white;
