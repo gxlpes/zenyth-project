@@ -117,79 +117,174 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"index.js":[function(require,module,exports) {
+"use strict";
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
-  return bundleURL;
-}
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
-  return '/';
-}
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
-}
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
+var navigationHeight = document.querySelector("nav");
+var nav = document.querySelector("nav");
 
-function updateLink(link) {
-  var newLink = link.cloneNode();
+var navSlide = function navSlide() {
+  var burguer = document.querySelector(".burguer");
+  var nav = document.querySelector(".nav-links");
+  var navLinks = document.querySelectorAll("nav li"); //toggle nav
 
-  newLink.onload = function () {
-    link.remove();
-  };
+  burguer.addEventListener("click", function () {
+    nav.classList.toggle("nav-active"); //animate links
 
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
+    navLinks.forEach(function (link, index) {
+      if (link.style.animation) {
+        link.style.animation = "";
+      } else {
+        link.style.animation = "navLinkFade 0.5s ease forwards ".concat(index / 5 + 0.5, "s");
       }
-    }
+    }); //burguer animation
 
-    cssTimeout = null;
-  }, 50);
-}
+    burguer.classList.toggle("toggle");
+  });
+};
 
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"scss/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
+navSlide(); //////////////////////////////////////////////////////////////////////////////////
+// cookies message
 
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var message = document.createElement("div");
+message.classList.add("cookie-message");
+message.innerHTML = 'We use cookies for analytics and perfomance of our website. <button class="cookie-close">Close</button>';
+nav.before(message);
+document.querySelector(".cookie-close").addEventListener("click", function () {
+  message.classList.add("removed");
+  document.querySelector(".cookie-close").addEventListener("transitionend", function () {
+    return message.remove();
+  });
+}); //////////////////////////////////////////////////////////////////////////////////
+// modal window setup
+
+var btnsOpenModal = document.querySelectorAll(".show-modal");
+var modal = document.querySelector(".modal");
+var overlay = document.querySelector(".overlay");
+var btnCloseModal = document.querySelector(".close-modal");
+
+var openModal = function openModal(e) {
+  e.preventDefault();
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+
+var closeModal = function closeModal() {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+
+btnsOpenModal.forEach(function (btn) {
+  return btn.addEventListener("click", openModal);
+});
+btnCloseModal.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+    closeModal();
+  }
+}); //////////////////////////////////////////////////////////////////////////////////
+// smooth scrolling button
+
+var btnScrollTo = document.querySelector(".btn-scrollTo");
+var sectionAppt = document.querySelector("#appointment");
+btnScrollTo.addEventListener("click", function (e) {
+  var sectionApptCoords = sectionAppt.getBoundingClientRect();
+  sectionAppt.scrollIntoView({
+    behavior: "smooth"
+  });
+}); //////////////////////////////////////////////////////////////////////////////////
+// smooth scrolling to the section
+
+document.querySelector(".nav-links").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  if (e.target.classList.contains("nav-link")) {
+    var id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+}); //////////////////////////////////////////////////////////////////////////////////
+// reveal sections with IntersectionObserver
+
+var allSections = document.querySelectorAll("section");
+
+var revealSection = function revealSection(entries, observer) {
+  var _entries = _slicedToArray(entries, 1),
+      entry = _entries[0];
+
+  if (!entry.isIntersecting) return; // else
+
+  entry.target.classList.remove("section-hidden");
+  observer.unobserve(entry.target);
+};
+
+var sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.25
+});
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add("section-hidden");
+}); //////////////////////////////////////////////////////////////////////////////////
+// tabbed component
+
+var tabs = document.querySelectorAll(".about-tab");
+var tabsContainer = document.querySelector(".about-content-container");
+var tabsContent = document.querySelectorAll(".about-content");
+tabsContainer.addEventListener("click", function (e) {
+  var clicked = e.target.closest(".about-tab");
+  console.log(clicked); //////////////////////////////////////////////////////////////////////////////////
+  // guard clause
+
+  if (!clicked) return; //////////////////////////////////////////////////////////////////////////////////
+  //active tab
+
+  tabs.forEach(function (t) {
+    return t.classList.remove("about-tab-active");
+  });
+  tabsContent.forEach(function (c) {
+    return c.classList.remove("about-content-active");
+  });
+  clicked.classList.add("about-tab-active"); //////////////////////////////////////////////////////////////////////////////////
+  // activate content area
+
+  document.querySelector(".about-content-".concat(clicked.dataset.tab)).classList.add("about-content-active");
+}); //////////////////////////////////////////////////////////////////////////////////
+// menu fade animation
+
+var handleHover = function handleHover(e, opacity) {
+  if (e.target.classList.contains("nav-link")) {
+    var link = e.target;
+    var siblings = link.closest("nav").querySelectorAll(".nav-link");
+    var logo = link.closest("nav").querySelector(".logo");
+    siblings.forEach(function (el) {
+      if (el !== link) el.style.opacity = opacity;
+    });
+    logo.style.opacity = opacity;
+  }
+};
+
+nav.addEventListener("mouseover", function (e) {
+  handleHover(e, 0.5);
+});
+nav.addEventListener("mouseout", function (e) {
+  handleHover(e, 1);
+});
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,5 +488,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/main.77bb5cfd.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+//# sourceMappingURL=/src.e31bb0bc.js.map

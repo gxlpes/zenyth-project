@@ -424,6 +424,7 @@ nav button.contact {
 }
 
 .about {
+  width: 75%;
   margin-top: 4rem;
   transition: all 1s ease-in-out;
   background-color: white;
