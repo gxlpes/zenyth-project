@@ -106,9 +106,3 @@ nav,
     animation: opacity 2.5s ease-in-out;
   }
 }
-
-@media (max-width: 768px) {
-  body:not(footer) {
-    padding-inline: 2rem;
-  }
-}
