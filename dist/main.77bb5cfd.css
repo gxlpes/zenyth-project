@@ -590,6 +590,7 @@ form textarea {
 }
 
 footer {
+  max-width: 100%;
   background-color: #8d00bf;
   margin-top: 10rem;
   color: white;
@@ -615,7 +616,6 @@ footer {
 }
 
 body {
-  padding: 1rem;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -637,6 +637,7 @@ content {
   display: flex;
   flex-direction: column;
   margin: auto;
+  padding: 1rem;
 }
 
 .section-hidden {

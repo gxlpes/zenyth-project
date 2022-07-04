@@ -1,6 +1,7 @@
 @use "../index" as i;
 
 footer {
+  max-width: 100%;
   background-color: i.$clr-purple1;
   margin-top: 10rem;
   color: white;
