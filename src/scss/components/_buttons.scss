@@ -46,9 +46,12 @@ button:hover,
   color: white;
   transition: all 0.5s ease-in-out;
   box-shadow: i.$box-shadow-default;
+  cursor: pointer;
 }
 
-button {
+.contact,
+.schedule,
+.cookie-close {
   font-family: fonts.$font-family;
   padding: 10px 15px;
   border-radius: 7px;
